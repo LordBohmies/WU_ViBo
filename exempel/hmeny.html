@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html lang="sv">
+	<head>
+		<title>Meny - Test</title>
+		<meta charset="utf-8">
+		<style>
+			html {
+				background-color: #E6E3D4;
+			}
+
+			body {
+				font: 100% verdana;
+				line-height: 1.4;
+				width: 70%;
+				margin: 0 auto;
+				padding-bottom: 20em;
+			}
+
+			/*ETT START*/
+			ul.one {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			ul.one li a:link{
+				background-color: slategray;
+				color: white;
+				width: 100px;
+				height: auto;
+				padding: 6px;
+				margin: 3px;
+				text-align: center;
+				display: block;
+			}
+			/*ETT SLUT*/
+
+			/*TVÅ START*/
+			ul.two {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			ul.two li a:link, a:visited{
+				background-color: slategray;
+				color: white;
+				width: 100px;
+				height: auto;
+				padding: 6px;
+				margin: 3px;
+				text-align: center;
+				display: block;
+			}
+
+			ul.two li a:hover{
+				background-color: darkgray;
+				color: black;
+				width: 105px;
+			}
+			/*TVÅ SLUT*/
+
+			/*TRE START*/
+			ul.three {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			ul.three li a:link, a:visited{
+				background-color: slategray;
+				color: white;
+				width: 110px;
+				height: 25px;
+				padding: 6px;
+				margin-left: 1px;
+				text-align: center;
+				display: inline;
+				text-decoration: none;
+				float: left;
+			}
+
+			ul.three li a:hover{
+				background-color: darkgray;
+				color: black;
+				height: 30px;
+			}
+			/*TRE SLUT*/
+
+			/*FYRA START*/
+			.four {
+				width: 100%;
+			}
+
+
+			.four li {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				float: left;
+			}
+
+			.four li a:link, a:visited{
+				background-color: slategray;
+				color: white;
+				width: 110px;
+				height: 25px;
+				padding: 6px;
+				margin-left: 1px;
+				text-align: center;
+				display: inline;
+				text-decoration: none;
+				float: left;
+			}
+
+			.four li a:hover{
+				background-color: darkgray;
+				color: black;
+			}
+
+			.four ul.sub {
+				float: none;
+			}
+
+			.four ul.sub li{
+				float: none;
+			}
+			/*FYRA SLUT*/
+
+			/*FEM START*/
+			nav.five {
+				background-color: slategray;
+				height: 2.3em;
+			}
+
+			nav.five ul, li {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				float: left;
+			}
+
+			nav.five ul {
+				background-color: darkgray;
+				height: 2em;
+				width: 100%;
+			}
+
+			nav.five li {
+				position: relative;
+			}
+
+			nav.five li a {
+				display: block;
+				line-height: 2em;
+				padding: 0 1em;
+				color: white;
+				text-decoration: none;
+			}
+
+			nav.five li a:hover {
+				background-color: slategray;
+				height: 2em;
+				padding-top: .3em;
+				position: relative;
+				top: -.3em;
+				border-radius: .3em .3em 0 0;
+			}
+
+			nav.five .current, a:hover .current {
+				background-color: gray;
+				color: black;
+				padding-top: .3em;
+				border-radius: .3em .3em 0 0;
+				position: relative;
+				top: -.3em;
+				border-bottom: .3em solid black;
+				cursor: default;
+			}
+
+			/*Dropdown-menyernas utseende*/
+
+			nav.five ul.sub {
+				float: none;
+				background-color: slategray;
+				width: auto;
+				height: auto;
+				position: absolute;
+				top: 2em;
+				display: none;
+				max-height: 0;
+				transition: max-height 5s ease-in-out;
+				overflow: hidden;
+			}
+
+			nav.five ul.sub li {
+				float: none;
+			}
+
+			nav.five ul.top li:hover ul {
+				display: block;
+				max-height: 10em;
+			}
+
+			nav.five ul.sub li a {
+				border-bottom: 1px solid white;
+				padding: .2em 1em;
+				white-space: nowrap;
+			}
+
+			nav.five ul.sub li:last-child a {
+				border-bottom: none;
+			}
+
+			nav.five ul.sub li a:hover {
+				background-color: darkgray;
+				height: 2em;
+				padding-top: .2em;
+				top: 0;
+				border-radius: 0;
+			}
+			/*FEM SLUT*/
+
+			/*TRANSITION START*/
+			div.transition {
+				width: 100px;
+				height: 100px;
+				background-color: slategray;
+				color: white;
+				transition: all 1s ease-in-out;
+			}
+
+			div.transition:hover{
+				width: 200px;
+				height: 200px;
+				background-color: darkgray;
+			}
+
+
+		</style>
+	</head>
+	<body>
+		<nav>
+			<h2>Meny 1</h2>
+			<ul class="one">
+				<li><a href="#">Start</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Media</a></li>
+			</ul>
+
+			<br /><br /><hr>
+
+			<h2>Meny 2</h2>
+			<ul class="two">
+				<li><a href="#">Start</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Media</a></li>
+			</ul>
+
+			<br /><br /><hr>
+
+			<h2>Meny 3</h2>
+			<ul class="three">
+				<li><a href="#">Start</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Media</a></li>
+			</ul>
+
+			<br /><br /><hr>
+
+			<br /><h2>Meny 4</h2>
+			<ul class="four">
+				<li class="topp"><a href="#">Start</a>
+					<ul class="sub">
+						<li><a href="#">Start</a></li>
+						<li><a href="#">Logga in</a></li>
+						<li><a href="#">Logga ut</a></li>
+					</ul>
+				</li>
+				<li class="topp"><a href="#">About</a>
+					<ul class="sub">
+						<li><a href="#">Victor</a></li>
+						<li><a href="#">Eva</a></li>
+						<li><a href="#">Kontakt</a></li>
+					</ul>
+				</li>
+				<li class="topp"><a href="#">Media</a>
+					<ul class="sub">
+						<li><a href="#">Bilder</a></li>
+						<li><a href="#">Ljud</a></li>
+						<li><a href="#">Filmer</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<br /><br /><br /><br /><br /><br /><br /><br /><hr>
+
+
+			<h2>Meny 5</h2>
+			<nav class="five">
+				<ul class="top">
+					<li><a href="#" class="current">Start</a>
+					<li><a href="#" title="Läs vår blogg!">Blogg</a>
+						<!--<ul class="sub">
+							<li><a href="#">Victor</a></li>
+							<li><a href="#">Eva</a></li>
+							<li><a href="#">Tillsammans</a></li>
+						</ul>-->
+					</li>
+					<li><a href="#" title="Se och hör oss!">Media</a>
+						<ul class="sub">
+							<li><a href="#">Bilder</a></li>
+							<li><a href="#">Ljud</a></li>
+							<li><a href="#">Filmer</a></li>
+						</ul>
+					</li>
+					<li><a href="#" title="Vilka är vi?">About</a>
+						<ul class="sub">
+							<li><a href="#">Victor</a></li>
+							<li><a href="#">Eva</a></li>
+							<li><a href="#">Kontakt</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</nav>
+
+		<section>
+
+		<br /><br /><br /><br /><br /><hr>
+		<div class="transition">DAAWG</div>
+
+		</section>
+	</body>
+</html>
