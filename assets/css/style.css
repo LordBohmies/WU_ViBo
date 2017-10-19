@@ -1,1 +1,11 @@
 /*Struktur -> Innehåll -> Dokumentation*/
+
+/* */
+
+p {
+    /*Färg kan deklarerars i text, rgb, hex och på flera andra sätt.
+    Text = Red, White, Cyan, Black, Orange
+    RGB (Red Green Blue) = 255.255.255
+    HEX (Hexadecimalt) = #019ACF */
+    color: #123;
+}
