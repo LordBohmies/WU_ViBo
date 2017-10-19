@@ -1,11 +1,146 @@
-/*Struktur -> Innehåll -> Dokumentation*/
+/* ==================================== */
+/* = BOHMIES CSS, version 1.0.0 = */
+/* ===== LATEST UPDATE 2016-05-13 ===== */
+/* ==================================== */
 
-/* */
+/* ====== COLOR DEFINETION ============ */
+/*
+	= Body
+		- background-color: #fff;
+		- color: #000;
+	= Header -
+        = Logo
+            - color:
+        = Logo start
+            - color:
+	= Navigation
+		- background-color: #683A1E / rgba(104, 58, 30, 1);
+		- color: #e1e1e1 / rgba(225, 225, 225, 1);
+		- border: #333333 / rgba(51, 51, 51, 1);
+		= Hover
+			- background-color: #333333 / rgba(51, 51, 51, 0.75);
+			- color: #fff / rgba(250, 250, 250, 1);
+			- Brand - color: #c8c8c8 / rgba(200, 200, 200, 1);
+		= Toggle
+			- border: #e1e1e1 / rgba(225, 225, 225, 1);
+			= Hover
+				- background-color: #333333 / rgba(51, 51, 51, 0.75);
 
-p {
-    /*Färg kan deklarerars i text, rgb, hex och på flera andra sätt.
-    Text = Red, White, Cyan, Black, Orange
-    RGB (Red Green Blue) = 255.255.255
-    HEX (Hexadecimalt) = #019ACF */
-    color: #123;
+	= Blue Container
+		- background-color: #D3E4DA / rgba(211, 228, 218, 1);
+		- color: #333333 / rgba(51, 51, 51, 1);
+		- border: #333333 / rgba(51, 51, 51, 1);
+
+	= Green Container
+		- background-color: #ECF5DE / rgba(236, 245, 222, 1);
+		- color: #333333 / rgba(51, 51, 51, 1);
+		- border: #333333 / rgba(51, 51, 51, 1);
+
+	= Footer
+		- background-color: #683A1E / rgba(104, 58, 30, 1);
+		- color: #333333 / rgba(51, 51, 51, 1);;
+		= Smallprint
+			- color: #999;
+
+	=
+	=
+	=
+	=
+	=
+	=
+*/
+/* ====== IMPORT FONTS ================ */
+
+
+/* ====== BASIC PAGE SETUP ============ */
+
+body {
+	margin: 0 auto;
+	padding-top: 70px;
+	font: 15px verdana, arial, helvetica, sans-serif;
+	color: #000;
+	text-align: center;
+	background-color: #fff;
 }
+
+article {
+
+}
+
+/* ====== HEADINGS ==================== */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight : normal;
+	margin-top: 10px;
+	letter-spacing: -1px;
+}
+
+/*Header*/
+h1 {
+	color: #000;
+	margin-bottom : 0.2em;
+	font-size : 3em;
+	line-height : 1.4;
+}
+
+/*Content*/
+h2 {
+	color: #222;
+	margin-bottom : .5em;
+	margin-top : .5em;
+	font-size : 2.5em;
+	line-height : 1.2;
+}
+
+h3 {
+	color: #333;
+	margin-bottom : 0.3em;
+	letter-spacing: -1px;
+	font-size : 2em;
+	line-height : 1.3;
+}
+
+/*Footer*/
+h4 {
+	margin-bottom : 0.5em;
+	font-size : 1.5em;
+	line-height : 1.25;
+	color: #ccc;
+}
+
+/*Other*/
+h5 {
+	color: #555;
+	margin-bottom : 1.25em;
+	font-size : .8em;
+}
+
+h6 {
+	color: #666;
+	font-size : 1em;
+}
+
+/* ====== TYPOGRAPHY ================== */
+/* ====== LINKS ======================= */
+/* ====== IMAGES ====================== */
+/* ====== TABLES ====================== */
+/* ====== FORMS ======================= */
+/* ====== MAIN LAYOUT ================= */
+/* ====== HEADER ====================== */
+header {
+    margin-top: 5px;
+    padding: 8px, 16px;
+}
+/* ====== NAVBAR ====================== */
+/* ====== MAINCONTENT ================= */
+/* ====== FOOTER ====================== */
+/* ====== SECTIONS ==================== */
+/* ====== CODE ======================== */
+/* ====== EXAMPLE ===================== */
+/* ====== SAMPLE ====================== */
+/* ====== NOTES ======================= */
+/* ====== COLUMNS ===================== */
+/* ====== BUTTONS ===================== */
+/* ====== GLOBAL OBJECTS ============== */
+/* ====== OTHER/VENDOR SPECIFIC ======= */

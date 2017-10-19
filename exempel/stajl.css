@@ -1,3 +1,14 @@
+/*Struktur -> Innehåll -> Dokumentation*/
+
+/* Färg kan deklarerars i text, rgb, hex och på flera andra sätt.
+Text = Färgval enligt Namn (engelska)    ex. Red, WHITE, black, gray
+RGB  = Färgval enligt "Red Green Blue" ex. rgb(255, 255, 0)
+HEX  = Färgval enligt Hexadecimalt     ex. #F00 eller #FF0000
+HSL  = Färgval enligt "Hue Saturation Lightness" ex. hsl(50,100,50)
+RGBA = Som RGB med Alpha (transparans) ex. rgba(255, 0, 0, 0.1)
+HSLA = Som HSL med Alpha (transparans) ex. hsla(0, 100, 50, 0.5)
+*/
+
 #special {
     background-color: cyan;
 }
