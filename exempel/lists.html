@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Listor</title>
-    <link rel="stylesheet" href="../assets/css/html5reset.css">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -24,52 +24,146 @@
                 <p class="and">Listor är det minst vanligaste av de två vanligaste sätten att strukturera information på. Rätt Använda är de till stor hjälp för att göra sidor användbara och tillgängliga. En punkt i en lista skall vara kort annars blir det ingen lista.</p>
             </article>
         </section>
-        <div id="tealcontainer">
+        <div class="freshcontainer">
             <section>
                 <article>
-                    <h3><span class="code">&ltul&gt</span> - Unordered List</h3>
-                    <ul>
-                        <li>Punkt 1</li>
-                        <li>Punkt 2</li>
-                        <li>Punkt 3</li>
-                    </ul>
+                    <h3><code class="htmlElement">&ltul&gt</code> - Unordered List</h3>
                     <p>
-                        Nulla pharetra finibus semper. Phasellus interdum nunc eu metus tincidunt, nec accumsan mauris pellentesque. Etiam et nisi quis turpis faucibus cursus. Proin eu lacus nec lacus pellente
+                        Elementet <code class="htmlElement">&ltul&gt</code> anger en <strong class="htmlComment">un-ordered list</strong>, oordnad lista, och kan se ut som nedan.
                     </p>
-                    <h3><span class="code">&ltol&gt</span> - Ordered List</h3>
-                    <ol>
-                        <li>Första</li>
-                        <li>Andra</li>
-                        <li>Tredje</li>
-                    </ol>
-                    <p>Ovan så ser ni ett av sätten att visa en ordnad lista.
-                    Man kan även välja att starta listan på ett annat nummer än det första. Det gör ni med attributet <span class="code">&ltol start="2"&gt</span></p>
-                    <ol start="2">
-                        <li>Första</li>
-                        <li>Andra</li>
-                        <li>Tredje</li>
-                    </ol>
-
-                    <h3><span class="code">&ltol&gt</span> - Ordered List</h3>
-                    <ol>
-                        <li>Första</li>
-                        <li>Andra</li>
-                        <li>Tredje</li>
-                    </ol>
-                    <p>Ovan så ser ni ett av sätten att visa en ordnad lista.
-                    Man kan även välja att starta listan på ett annat nummer än det första. Det gör ni med attributet <span class="code">&ltol start="2"&gt</span></p>
-                    <ol start="2">
-                        <li>Första</li>
-                        <li>Andra</li>
-                        <li>Tredje</li>
-                    </ol>
+                    <div class="watermeloncontainer">
+                        <ul>
+                            <li>Listan har ett indrag som standard.</li>
+                            <li>Varje sak i listan föregås av ett punkt-tecken.</li>
+                            <li>Användare av talsyntes hör orden <q>list punkt</q> eller liknande läsas upp för varje punkt.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article>
+                    <h3><code class="htmlElement">&ltol&gt</code> - Ordered List</h3>
+                    <p>
+                        Numrerade listor eller <strong class="htmlComment">Ordered lists</strong>, <code class="htmlElement">&ltol&gt</code>, fungerar som vanliga punktlistor men då ordningen är viktig så tilldelas varje punkt ett nummer.
+                    </p>
+                    <div class="watermeloncontainer">
+                        <ol>
+                            <li>Det måste inte vara en decimalsk siffra.</li>
+                            <li>Det kan även vara bokstäver.</li>
+                            <li>Eller Romerska siffror.</li>
+                        </ol>
+                    </div>
+                    <p>
+                        Man kan även välja att starta listan på ett annat nummer än det första. Det gör ni med attributet <code class="htmlElement">&ltol <span class="htmlAttributeName">start</span></code></span class="htmlAttributeValue">="2"</span></code>&gt</code>.
+                    </p>
+                    <div class="watermeloncontainer">
+                        <ol start="2">
+                            <li>#</li>
+                        </ol>
+                    </div>
+                </article>
+                <article>
+                    <h3><code class="htmlElement">&ltdl&gt</code> - Description List</h3>
+                    <p>
+                        Dessa listor används när man har namn på något och en kort beskrivning. Listtypen får användas för alla <strong class="htmlComment">nyckelvärdesrelationer</strong> (<strong class="htmlComment">key - value</strong>). Man måste däremot inte ha exakt jämna par mellan ordet som skall förklars, <code class="htmlElement">&ltdt&gt</code>, och själva förklaringen, <code class="htmlElement">&ltdd&gt</code>.
+                    </p>
+                    <div class="watermeloncontainer">
+                        <dl>
+                            <dt>Namn:</dt>
+                                <dd>Julius Caesar</dd>
+                            <dt>Yrke:</dt>
+                                <dd>General</dd>
+                                <dd>Diktator</dd>
+                                <dd>Författare</dd>
+                        </dl>
+                    </div>
+                    <p>
+                        Listtypen kan användas till ordlistor, <strong class="htmlComment" style="color:darkblue;">FAQ</strong>-sektioner, metadata och i princip allt som bygger på principen namn - värde.
+                    </p>
+                    <p>
+                        I HTML5 kallas listtypen för <strong class="htmlComment">description list</strong>. I HTML4 kallades den för <strong class="htmlComment">definition list</strong>, och det namnet är fortfarande vanligt i dagligt tal. För att fungera som just en definitionslista, så behöver man dock komplettera <code class="htmlElement">&ltdt&gt</code> med elementet <code class="htmlElement">&ltdfn&gt</code>, enligt HTML5.
+                    </p>
+                    <div class="watermeloncontainer">
+                        <dl>
+                            <dt><dfn>Fotölj</dfn></dt>
+                                <dd>Bekväm stol med mjuk stoppning.</dd>
+                        </dl>
+                    </div>
                 </article>
             </section>
-        </div>
-
-        <div id="freshcontainer">
             <section>
                 <article>
+                    <h3>CSS för listor - <code class="htmlElement">&ltul&gt</code> och <code class="htmlElement">&ltol&gt</code></h3>
+                    <p>
+                        Enligt CSS så är alla boxar som har <code class="cssPropertyName">display: <span class="cssPropertyValue">list-item</span></code></code> en lista. Det inkluderar som standard <code class="htmlElement">&ltli&gt</code> och <code class="htmlElement">&ltol&gt</code> men inte definitionslistor. Listor har normalt ett <strong>punktuppställningstecken (list marker)</strong> och det har sin egen box. I allt övrigt fungerar värdet <span class="cssPropertyValue">list-item</span></code> som <code class="cssPropertyName">display <span class="cssPropertyValue">: block</span></code></code>.
+                    </p>
+                    <p>
+                        Det finns några CSS-egenskaper just för listor:
+                        <ul>
+                            <li><code><span class="cssPropertyName">list-style-position</span></code> låter dig välja hur <span class="htmlComment">marker box</span> förhåller sig till punktens box. Kan vara <span class="cssPropertyValue">outside</span>, <span class="cssPropertyValue">inside</span>< eller (nytt i CSS3) <span class="cssPropertyValue">hanging</span>. Standard är outside.</li>
+                            <li><code><span class="cssPropertyName">list-style-image</span></code> låter dig välja vilken bild som helst som <span class="htmlComment">punktuppställningstecken</span>. Standard är att inte ha någon bild alls (värdet <span class="cssPropertyValue">none</span>).</li>
+                            <li><code><span class="cssPropertyName">list-style-type</span></code> låter dig välja bland ett antal färdiga tecken, exempelvis <span class="cssPropertyValue">disc</span>, <span class="cssPropertyValue">circle</span>, <span class="cssPropertyValue">square</span> - eller för numrerade listor - <span class="cssPropertyValue">decimal</span>, <span class="cssPropertyValue">decimal-leading-zero</span>, <span class="cssPropertyValue">lower-roman</span> (romerska siffror), <span class="cssPropertyValue">lower-alpha</span>, <span class="cssPropertyValue">upper-alpha</span>. </li>
+                            <li><code><span class="cssPropertyName">list-style</span></code> är <span class="htmlComment">kortform (shorthand)</span> för dessa tre. Kom ihåg att utelämnade egenskaper sätts till sina standardvärden</li>
+                        </ul>
+                    </p>
+                    <p>
+                        CSS3 introducerar pseudo-elementet <code class="cssPropertyValue">::marker</code> som gör att man kan detaljstyra utseendet på marker box. Dessutom kan man göra egna list-style-type med <span class="cssPropertyName">@counter-style</span>.
+                    </p>
+                </article>
+                <article class="">
+                    <h3>Menyer</h3>
+                    <p>
+                        Ett vanligt sätt att använda listor är för menyerna på webbplatser. En meny är ju en lista med länkar.<br>
+                        Så här kan koden se ut.
+                    </p>
+                    <div class="codewindow">
+                        <span class="htmlElement">&ltnav&gt</span><br>
+                            <span class="htmlElement">&nbsp&nbsp&ltul<span class="htmlAttributeName"> class</span><span class="htmlAttributeValue">="menu"</span>&gt</span><br>
+                            <span class="htmlElement">&nbsp&nbsp&nbsp&nbsp&ltli&gt&lta <span class="htmlAttributeName">href</span><span class="htmlAttributeValue">="om-oss.html"</span>&gt</span>Vilka vi är &#38&#35x3020;<span class="htmlElement">&lt/a&gt&lt/li&gt</span><br>
+                            <span class="htmlElement">&nbsp&nbsp&nbsp&nbsp&ltli&gt&lta <span class="htmlAttributeName">href</span><span class="htmlAttributeValue">="arbeten.html"</span>&gt</span>Vad vi gör &#38&#35x2318;<span class="htmlElement">&lt/a&gt&lt/li&gt</span><br>
+                            <span class="htmlElement">&nbsp&nbsp&nbsp&nbsp&ltli&gt&lta <span class="htmlAttributeName">href</span><span class="htmlAttributeValue">="blog.html"</span>&gt</span>Blogg &#38&#35x272A;<span class="htmlElement">&lt/a&gt&lt/li&gt</span><br>
+                            <span class="htmlElement">&nbsp&nbsp&nbsp&nbsp&ltli&gt&lta <span class="htmlAttributeName">href</span><span class="htmlAttributeValue">="kontakt.html"</span>&gt</span>Kontakt &#38&#35x260E;<span class="htmlElement">&lt/a&gt&lt/li&gt</span><br>
+                            <span class="htmlElement">&nbsp&nbsp&ltul&gt<br>&ltnav&gt</span>
+                    </div>
+                    <nav>
+                        <ul class="menu" >
+                            <li style="color:black;"><a href="#">Vilka vi är &#x3020;</a></li>
+                            <li><a href="#">Vad vi gör &#x2318;</a></li>
+                            <li><a href="#">Blogg &#x272A;</a></li>
+                            <li><a href="#">Kontakt &#x260E;</a></li>
+                        </ul>
+                    </nav>
+                    <p>Och så lite CSS till det.</p>
+                    <div class="codewindow">
+                        <span class="cssElement">nav </span>&#123<br>
+                        &nbsp&nbsp<span class="cssPropertyName">background-color<span class="cssPropertyValue">: rgba(5, 101, 113, 1);</span><br>
+                        &nbsp&nbspwidth<span class="cssPropertyValue">: 20%;</span><br>
+                        &nbsp&nbspdisplay<span class="cssPropertyValue">: inline;</span></span><br>
+                        &#125<br>
+                        <span class="cssElement">nav ul </span>&#123<br>
+                        &nbsp&nbsp<span class="cssPropertyName">margin<span class="cssPropertyValue">: 0;</span><br>
+                        &nbsp&nbsppadding<span class="cssPropertyValue">: 0;</span></span><br>
+                        &#125<br>
+                        <span class="cssElement">nav li </span>&#123<br>
+                        &nbsp&nbsp<span class="cssPropertyName">display<span class="cssPropertyValue">: block;</span><br>
+                        &nbsp&nbsplist-style-type<span class="cssPropertyValue">: none;</span></span><br>
+                        &#125<br>
+                        <span class="cssElement">nav a </span>&#123<br>
+                        &nbsp&nbsp<span class="cssPropertyName">text-decoration<span class="cssPropertyValue">: none;</span><br>
+                        &nbsp&nbspcolor<span class="cssPropertyValue">: black;</span></span><br>
+                        &#125<br>
+                    </div>
+                    <br>
+                    <nav id="ListsMenuExample">
+                        <ul class="menu">
+                            <li><a href="#">Vilka vi är &#x3020;</a></li>
+                            <li><a href="#">Vad vi gör &#x2318;</a></li>
+                            <li><a href="#">Blogg &#x272A;</a></li>
+                            <li><a href="#">Kontakt &#x260E;</a></li>
+                        </ul>
+                    </nav>
+                    <br>
+                    <p style="clear:both">
+                        Vi beskriver här en enklare vertikal meny.
+                    </p>
                 </article>
             </section>
         </div>

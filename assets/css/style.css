@@ -164,7 +164,7 @@ p.center {
 
 
 .and {
-	font-family: GoudyBookletter1911Regular, Georgia, Times New Roman, sans-serif;
+	font-family: GoudyBookletter1911Regular, Georgia, 'Times New Roman', sans-serif;
 	font-size: 1.5em;
 }
 
@@ -177,9 +177,13 @@ ul, ol {
 	padding : 0 0 0 24px;
 }
 
-li ul, li ol {
+/*ul li, ol li {
 	margin : 0;
 	font-size : 1em;
+}*/
+
+li {
+	margin-bottom: 5px;
 }
 
 dl,
@@ -227,7 +231,7 @@ sub {
 	color: #666;
 }
 /* ====== LINKS ======================= */
-
+/*
 a {
 	color : #cc1122;
 	-webkit-transition: all 0.3s ease;
@@ -256,7 +260,7 @@ img {
 	border : 0;
 	max-width: 100%;
 	height: auto;
-	width: auto\9;
+	width: auto;
 }
 
 img.floatleft { float: left; margin: 0 10px 0 0; }
@@ -321,20 +325,22 @@ nav {
 
 	}
 
-	#freshcontainer {
+	.freshcontainer {
 		background-color: rgba(208, 223, 200, 1);
 		color: #414141;
 	    border: #333333;
 	}
-	#tealcontainer {
+	.tealcontainer {
 		background-color: rgba(5, 101, 113, 1);
 		color: #f4f6f7;
 	    border: #333333;
 	}
-	#watermeloncontainer {
+	.watermeloncontainer {
 		background-color: rgba(255, 106, 92, 1);
 		color: #f4f6f7;
 	    border: #333333;
+		padding: 6px 0 1px 6px;
+		margin: 0;
 	}
 
 		section {
@@ -343,13 +349,12 @@ nav {
 			max-width: 1440px;
 			margin: 0 auto;
 			padding: 1em 0px;
-			color:;
-			line-height: ;
 			position: relative;
 		}
 
 /* ====== FOOTER ====================== */
 #footcontainer {
+	clear: both;
 	position: relative;
 	bottom: 0;
 	height: 130px;
@@ -424,8 +429,6 @@ nav {
 		padding: 5px 5px 5px 0px;
 		vertical-align: middle;
 		opacity: 0.75;
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-		filter: alpha( opacity  = 75);
 		-webkit-transition: all 0.3s ease;
 		-moz-transition: all 0.3s ease;
 		-o-transition: all 0.3s ease;
@@ -439,8 +442,6 @@ nav {
 
 	ul.footerlistimgages li a:hover img {
 		opacity: 1.0;
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-		filter: alpha( opacity  = 100);
 	}
 
 		#smallprint {
@@ -459,8 +460,6 @@ nav {
 			margin: 0px 10px 15px 0px;
 			vertical-align: middle;
 			opacity: 0.75;
-			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-			filter: alpha( opacity  = 75);
 			-webkit-transition: all 0.3s ease;
 			-moz-transition: all 0.3s ease;
 			-o-transition: all 0.3s ease;
@@ -470,8 +469,6 @@ nav {
 
 		#smallprint a:hover img {
 			opacity: 1.0;
-			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-			filter: alpha( opacity  = 100);
 		}
 
 		#smallprint a:link, #smallprint a:visited { color: #CCDFC8; text-decoration: none; }
@@ -485,7 +482,87 @@ nav {
 	margin: 0px;
 }
 /* ====== CODE ======================== */
+code {
+	background-color: rgba(192, 192, 192, .5);
+	border: black dashed 1px;
+	padding: 0 6px;
+	font-size: 1.5em;
+}
+
+.codewindow {
+	background-color: rgba(192, 192, 192, .5);
+	border: black dashed 1px;
+	padding: 0 6px;
+	font-size: 1.5em;
+}
+
+.htmlElement {
+	color: purple;
+}
+
+.htmlAttributeName {
+	color: darkgreen;
+}
+.htmlAttributeValue {
+	color: darkblue;
+}
+.htmlComment {
+	color: darkred;
+	font-style: italic;
+}
+.cssElement {
+	color: red;
+}
+.cssClass {
+	color: blue;
+	font-style: italic;
+}
+.cssId {
+	color: blue;
+}
+.cssPropertyName {
+	color: green;
+}
+.cssPropertyValue {
+	color: blue;
+}
 /* ====== EXAMPLE ===================== */
+#ListsMenuExample {
+	background-color: rgba(5, 101, 113, 1);
+	height: 2.3em;
+}
+#ListsMenuExample ul, #ListsMenuExample li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	float: left;
+}
+#ListsMenuExample ul {
+	background-color: rgba(5, 101, 129, 1);
+	height: 2em;
+	width: 100%;
+}
+#ListsMenuExample li {
+	position: relative;
+	width: 150px;
+	text-align: center;
+}
+#ListsMenuExample li a {
+	display: block;
+	line-height: 2em;
+	padding: 0 1em;
+	color: white;
+	text-decoration: none;
+}
+#ListsMenuExample li a:hover {
+	background-color: rgba(5, 101, 113, 1);
+	color: lightgray;
+	height: 2em;
+	padding-top: .3em;
+	position: relative;
+	top: -.3em;
+	border-radius: .3em .3em 0 0;
+}
 /* ====== SAMPLE ====================== */
 /* ====== NOTES ======================= */
 /* ====== COLUMNS ===================== */
@@ -506,7 +583,7 @@ nav {
 }
 
 .group {
-    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 
 .floatleft {
