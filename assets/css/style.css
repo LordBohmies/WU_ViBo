@@ -50,44 +50,42 @@
 	=
 	=
 */
+.fresh {
+	background-color: rgba(208, 223, 200, 1);
+	color: #414141;
+	border: #333333;
+}
+.teal {
+	background-color: rgba(5, 101, 113, 1);
+	color: #f4f6f7;
+	border: #333333;
+}
+
 /* ====== IMPORT FONTS ================ */
 
 
 /* ====== BASIC PAGE SETUP ============ */
 
 body {
-	margin: 0 auto;
-	font: 100% verdana, arial, helvetica, sans-serif;
-	color: #414141;
-	text-align: center;
-	background-color: #f4f6f7;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 100%;
 }
-
-/*section {
-	width: 80%;
-	background-color: rgba(255, 0, 0, 0.5);
-}
-
-article {
-	text-align: left;
-	padding: 1em 5%;
-}*/
 
 /* ====== HEADINGS ==================== */
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: helvetica, verdana, arial, sans-serif;
 	font-weight : normal;
-	margin-top: 10px;
 	letter-spacing: -1px;
+	text-align: center;
 }
 
 /*Header*/
 h1 {
 	color: #000;
 	margin-bottom: 0.2em;
-	font-size : 5em;
-	line-height : 1.4;
+	font-size: 5em;
+	line-height: 1.4;
 }
 
 /*Content*/
@@ -128,9 +126,9 @@ h6 {
 }
 
 /* ====== TYPOGRAPHY ================== */
-p, ol, ul, dl, address {
-	margin-bottom : 1.5em;
-	font-size : 1em;
+p, address {
+	margin-bottom: 1.5em;
+	font-size: 1em;
 }
 
 p {
@@ -139,8 +137,8 @@ p {
 
 
 p.introtext {
-	font-family:  MuseoSlab100, 'lucida sans unicode', 'lucida grande', 'Trebuchet MS', helvetica, verdana, arial, sans-serif;
-	font-size : 2.5em; /* 40 / 16 */
+	font-family:  MuseoSlab100, 'lucida sans unicode', 'lucida grande', 'Trebuchet MS', sans-serif;
+	font-size : 2em; /* 40 / 16 */
 	color: #333;
 	line-height: 1.4em;
 	letter-spacing: -1px;
@@ -149,14 +147,17 @@ p.introtext {
 
 
 p.handwritten {
-	font-family:  HandSean, 'lucida sans unicode', 'lucida grande', 'Trebuchet MS', helvetica, verdana, arial, helvetica, sans-serif;
+	font-family:  HandSean, 'lucida sans unicode', 'lucida grande', 'Trebuchet MS', sans-serif;
 	font-size: 1.375em; /* 24 / 16 */
 	line-height: 1.8em;
 	margin-bottom: 0.3em;
 	color: #666;
 }
 
-p.codetext {}
+.codetext {
+	font-family: Inconsolata, Montserrat, 'Noto Sanns', monospace, sans-serif;
+	font-size: 1.3em;
+}
 
 p.center {
 	text-align: center;
@@ -173,26 +174,29 @@ p.center {
 }
 
 ul, ol {
-	margin : 0 0 1.5em 0;
-	padding : 0 0 0 24px;
+	margin: 0;
+	padding-left: 1.5em;
+	font-size: 1em;
 }
-
-/*ul li, ol li {
-	margin : 0;
-	font-size : 1em;
-}*/
 
 li {
-	margin-bottom: 5px;
+	margin-bottom: .5em;
+	font-size: 1em;
 }
 
-dl,
+dl {
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+}
+
 dd {
-	margin-bottom : 1.5em;
+	margin-bottom: .5em;
+	font-size: 1em;
 }
 
 dt {
-	font-weight : normal;
+	margin: bold;
 }
 
 b, strong {
@@ -268,14 +272,56 @@ img.floatright { float: right; margin: 0 0 0 10px; }
 
 /* ====== TABLES ====================== */
 table {
-	border-collapse : collapse;
-	border-spacing : 0;
 	margin-bottom : 1.4em;
 	width : 100%;
 }
 
+.borderless {
+	*border-collapse: collapse; /* Fulhack för IE7 och lägre */
+	border-spacing: 0;
+}
+
+.services {
+	border: 1px solid #333;
+	background: #f4f6f7;
+	width: 96%;
+	margin: 5% auto 2em;
+	border-radius: 5px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+	text-shadow: #fff 1px 1px 1px;
+}
+
+thead {
+	font-size: 150%;
+}
+
+tr {
+	-webkit-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-ms-transition: background-color 1s;
+	-o-transition: background-color 1s;
+}
+
+table#example tr:target {
+	background-color: #056571;
+}
+
+table#example tr:hover {
+	background-color: #FF6A5C;
+}
+
 th, td, caption {
-	padding : .25em 10px .25em 5px;
+	padding : 18px 28px 18px;
+}
+
+th {
+	padding-top: 22px;
+	background: #ddd;
+}
+
+td {
+	border-top: 1px solid #333;
+	border-right: 1px solid #333;
 }
 
 tfoot {
@@ -288,69 +334,18 @@ caption {
 
 /* ====== FORMS ======================= */
 /* ====== MAIN LAYOUT ================= */
-
-#skiptomain { display: none; }
-
-#wrapper {
-	width: 100%;
-	position: relative;
-	text-align: left;
-}
-
 /* ====== HEADER ====================== */
-
-#headcontainer {
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.75);
-}
-
-header {
-	clear: both;
-	width: 80%;
-	max-width: 1472px;
-	margin: 0 auto;
-	font-size: 0.8rem;
-	position: relative;
-}
 /* ====== NAVBAR ====================== */
-nav {
-	list-style: none;
-}
 /* ====== MAINCONTENT ================= */
-#maincontainer {
-	width: 100%;
-}
-
-	.standardcontainer {
-
-	}
-
-	.freshcontainer {
-		background-color: rgba(208, 223, 200, 1);
-		color: #414141;
-	    border: #333333;
-	}
-	.tealcontainer {
-		background-color: rgba(5, 101, 113, 1);
-		color: #f4f6f7;
-	    border: #333333;
-	}
 	.watermeloncontainer {
 		background-color: rgba(255, 106, 92, 1);
 		color: #f4f6f7;
-	    border: #333333;
+	    border: #333333 solid 1px;
+		width: 95%;
+		margin: 0 auto;
+		margin-bottom: 0.5em;
 		padding: 6px 0 1px 6px;
-		margin: 0;
 	}
-
-		section {
-			clear: both;
-			width: 80%;
-			max-width: 1440px;
-			margin: 0 auto;
-			padding: 1em 0px;
-			position: relative;
-		}
 
 /* ====== FOOTER ====================== */
 #footcontainer {
@@ -484,6 +479,8 @@ nav {
 /* ====== CODE ======================== */
 code {
 	background-color: rgba(192, 192, 192, .5);
+	color: black;
+	font-family: Inconsolata, Montserrat, 'Noto Sanns', monospace, sans-serif;
 	border: black dashed 1px;
 	padding: 0 6px;
 	font-size: 1.5em;
@@ -491,7 +488,10 @@ code {
 
 .codewindow {
 	background-color: rgba(192, 192, 192, .5);
+	color: black;
+	font-family: Inconsolata, Montserrat, 'Noto Sanns', monospace, sans-serif;
 	border: black dashed 1px;
+	margin-bottom: .5em;
 	padding: 0 6px;
 	font-size: 1.5em;
 }

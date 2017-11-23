@@ -5,29 +5,252 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Listor</title>
-    <link rel="stylesheet" href="../assets/css/html5reset.css">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
-<div id="wrapper">
-    <div id="headcontainer">
-        <header>
-            <h1>Webbutveckling 1</h1>
-        </header>
-        <nav>
 
-        </nav>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat|Noto+Sans" rel="stylesheet"> <!-- Imported from dafont -->
+</head>
+<body class="fresh">
+    <!-- Navigation -->
+    <nav class="navbar navbar-toggleable-md navbar-inverse" style="background-color:rgba(5, 101, 113, 1);">
+        <a class="navbar-brand" href="#">Webbutveckling 1</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-lable="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <div class="container navbar-nav">
+                <a class="nav-item nav-link" href="grund.html">Grund</a>
+                <a class="nav-item nav-link" href="teckenkodning.html">Teckenkodning</a>
+                <a class="nav-item nav-link" href="lists.html">Listor</a>
+                <a class="nav-item nav-link" href="table.html">Tabeller</a>
+                <a class="nav-item nav-link" href="forms.html">Formulär</a>
+                <a class="nav-item nav-link" href="#">Media</a>
+                <a class="nav-item nav-link" href="#">Javascript</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron describing chapter -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Listor</h1>
+            <article>
+                <p class="introtext center">Från enkla <span class="htmlComment">inloggningar</span> till avancerade <span class="htmlComment">nyttoprogram</span> så används <span class="htmlComment">formulär</span> (<span class="htmlComment">forms</span>). <span class="htmlComment">CMS:er</span> sköts via formulär. <span class="htmlComment">Bloggar</span>,  <span style="color:darkblue;">Facebook</span> och  <span style="color:darkblue;">Twitter</span> får sina data via formulär.<br>
+                I och med <span style="color:darkblue;">HTML5</span> och <span style="color:darkblue;">CSS 3</span>, så finns det numera så många olika element, attribut, egenskaper och selektorer att välja på att man lätt går vilse. Här finns varken plats eller någon nytta med att gå igenom allt i detalj. Vi satser på grunderna och avslutar med ett enkelt exempel.</p>
+            </article>
+        </div>
     </div>
-    <div id="maincontainer">
+
+    <!-- Content -->
+    <div class="container">
         <section>
             <article>
-                <p class="and"></p>
+                <h2>Formulär, http och https</h2>
+                <ol>
+                    <li>Formulär</li>
+                    <li>Bearbeta</li>
+                    <li>Visa Resultat</li>
+                </ol>
+                <p>
+                    Listan ovan illustrerar formulär i dess enklaste form. Webbläsaren, punkt 1, visar ett formulär som skickas (<span class="htmlComment">submit</span>) till servern, punkt 2. Där bearbetas den inmatade datan med någon slags server-side skript och ett resultat visas, punkt 3, oftast i form av en bekräftelse eller ett felmeddelande.<br>
+                    Det senare bör upprepa formuläret med de gamla värdena, så att man bara behöver ändra det som blivit fel. <br>
+                </p>
+                <p>
+                    Data skickas med <span class="htmlComment">http</span>. Om känslig data skickas, såsom kreditkortsinformation, så måste förbindelsen vara krypterad med <span class="htmlComment">SSL/TLS</span>. Det finns två sätt att skicka datata: <span class="htmlComment">GET</span> och <span class="htmlComment">POST</span>.<br>
+                    tab
+                    Metoden <span class="htmlComment">GET</span> visar vad som skickas i sidans URL och olika webbläsare har begränsningar för hur lång en URL kan vara, så denna metod <strong>kan</strong> inte användas för stora mängder data. URL:er bör även vara läsliga och kunna klistras in i mejl eller på sociala nätverk, vilket begränsar mängden ytterligare. För sökformulä, så är <span class="htmlComment">GET</span> bra, nästan aldrig för andra sorters formulär. För lösenord (inloggning, registrering) är det en dödssynd att använda <span class="htmlComment">GET</span>, eftersom det kommer synas i klartext i adressfältet, oavsett alla andra åtgärder du vidtagit för att skydda det.<br>
+                    Metoden <span class="htmlComment">POST</span> skickar datan som ett eget dokument (<span class="htmlComment">message body</span>) istället för en del av http-huvudet.
+                </p>
+                <h3>Elementet</h3>
+                <p>Formulär omges av start- och sluttaggen för elementet <span class="htmlElement">&ltform&gt</span>.
+                <div class="codewindow">
+                    <span class="htmlElement">&ltform</span> <span class="htmlAttributeName">action</span>="<span class="htmlAttributeValue">login.php</span>" <span class="htmlAttributeName">method</span>="<span class="htmlAttributeValue">post</span>"<span class="htmlElement">&gt</span><br>
+                        &nbsp&nbsp...<br>
+                    <span class="htmlElement">&lt/form&gt</span>
+                </div>
+                Formuläret har alltid två egenskaper, <span class="htmlAttributeName codetext">action</span> och <span class="htmlAttributeName codetext">method</span>, även om de inte skrivs ut som attribut. Med attributet <span class="htmlAttributeName codetext">action</span> kan man tala om vart formuläret skickas, d.v.s på vilken URL serverns skript återfinns. Med attributet <span class="htmlAttributeName codetext">method</span> väljer du mellan GET och POST. Som attributvärde spelar det ingen roll om du använder stora eller små bokstäver.<br>
+                Om du inte anger action, så skickas formulärets data till sidans egen adress.
+                </p>
+                <h3>Synkronisering</h3>
+                <p>
+                    För dina första formulär så har antagligen någon annan gjort det skript som körs på servern. Att göra säkra skript är nämligen inte helt enkelt. Det finns många slags faror.<br>
+                    Serverskripten förväntar sig Data enligt mönstret <span class="htmlComment">nyckel - värde (key - value)</span>. Nyckeln kallas här också <span class="htmlComment">namn (name)</span> och om du använder ett färdigt skript är det viktigt att du läser instruktionerna, så att du väljer rätt namn.<br>
+                    Skripten kan också producera felmeddelanden eller annan information som ska visas för användarna. Hur de infogas i HTML-koden är en annan sak du behöver kontrollera.
+                </p>
+
+                <h2>Inloggningsformulär</h2>
+                <p>Ett mycket enkelt inloggningsformulär kan kodas så här:<br>
+                <div class="codewindow">
+                    <span class="htmlElement">&ltform</span> <span class="htmlAttributeName">action</span>="<span class="htmlAttributeValue">login.php</span>" <span class="htmlAttributeName">method</span>="<span class="htmlAttributeValue">post</span>"<span class="htmlElement">&gt</span><br>
+                        &nbsp&nbsp<span class="htmlElement">&ltp&gt</span><br>
+                            &nbsp&nbsp&nbsp&nbsp<span class="htmlElement">&ltlabel</span> <span class="htmlAttributeName">for</span>="<span class="htmlAttributeValue">name</span>"<span class="htmlElement">&gt</span>Användarnamn: <span class="htmlElement">&lt/label&gt</span><br>
+                            &nbsp&nbsp&nbsp&nbsp<span class="htmlElement">&ltinput</span> <span class="htmlAttributeName">type</span>="<span class="htmlAttributeValue">text</span>" <span class="htmlAttributeName">name</span>="<span class="htmlAttributeValue">uName</span>" <span class="htmlAttributeName">id</span>="<span class="htmlAttributeValue">name</span>" <span class="htmlAttributeName">value</span>="<span class="htmlAttributeValue">användarnamn</span>"  <span class="htmlAttributeName">required</span><span class="htmlElement">/&gt</span><br>
+                        &nbsp&nbsp<span class="htmlElement">&lt/p&gt</span><br>
+                        &nbsp&nbsp<span class="htmlElement">&ltp&gt</span><br>
+                            &nbsp&nbsp&nbsp&nbsp<span class="htmlElement">&ltlabel</span> <span class="htmlAttributeName">for</span>="<span class="htmlAttributeValue">pass</span>"<span class="htmlElement">&gt</span>Lösenord: <span class="htmlElement">&lt/label&gt</span><br>
+                            &nbsp&nbsp&nbsp&nbsp<span class="htmlElement">&ltinput</span> <span class="htmlAttributeName">type</span>="<span class="htmlAttributeValue">password</span>" <span class="htmlAttributeName">name</span>="<span class="htmlAttributeValue">uPass</span>" <span class="htmlAttributeName">id</span>="<span class="htmlAttributeValue">pass</span>" <span class="htmlAttributeName">value</span>="<span class="htmlAttributeValue">password</span>" <span class="htmlAttributeName">required</span> <span class="htmlElement">/&gt</span><br>
+                        &nbsp&nbsp<span class="htmlElement">&lt/p&gt</span><br>
+                        &nbsp&nbsp<span class="htmlElement">&ltp&gt</span><br>
+                            &nbsp&nbsp&nbsp&nbsp<span class="htmlElement">&ltinput</span> <span class="htmlAttributeName">type</span>="<span class="htmlAttributeValue">submit</span>" <span class="htmlAttributeName">value</span>="<span class="htmlAttributeValue">Logga in</span>"<span class="htmlElement">&gt</span><br>
+                        &nbsp&nbsp<span class="htmlElement">&lt/p&gt</span><br>
+                    <span class="htmlElement">&lt/form&gt</span><br>
+                </div>
+                Och se ut så här:<br>
+                <form action="login.php" method="post">
+                    <p>
+                        <label for="name">Användarnamn: </label>
+                        <input type="text" name="uName" id="name" value="användarnamn"  required />
+                    </p>
+                    <p>
+                        <label for="pass">Lösenord</label>
+                        <input type="password" name="uPass" id="pass" value="password" required />
+                    </p>
+                    <p>
+                        <input type="submit" value="Logga in">
+                    </p>
+                </form><br>
+                Utseendet är utifrån resterande delar av min CSS och kommer se annorlunda ut för er.
+                </p>
+
+                <h2>Name, value och id</h2>
+                <p>
+                    I koden ovan förekommer tre grundläggande attribut.
+                    <ul>
+                        <li>Attributet <span class="htmlAttributeName codetext">name</span> är främst till för servern. Det är nyckeln som vi talat om tidigare. Värder är vanligtvis unikt, utom för <span class="htmlComment">radioknappar</span> och <span class="htmlComment">checkbox-rutor</span> (se nedan), där det används för gruppering.</li>
+                        <li>Attributet <span class="htmlAttributeName codetext">value</span> används ovan för att styra texten på submitknappen, men är annars ett startförslag som visas i textrutor. för knappar av olika slag är <span class="htmlAttributeName codetext">value</span> själva värdet som skickas.</li>
+                        <li>Attributet <span class="htmlAttributeName codetext">id</span> är enbart till för användning på klienten. Det påverkar inte skickad data. Ovan länkas förklarande text i <span class="htmlElement">&ltlabel&gt</span> samman med motsvarande input-element via attributen <span class="htmlAttributeName codetext">for</span> och <span class="htmlAttributeName codetext">id</span>. Id används inte för gruppering, eftersom varje id måste vara unikt.</li>
+                    </ul>
+                    Om du vill ge ett tips till användaren som inte också är ett föreslaget värde, så använd attributet <span class="htmlAttributeName codetext">placeholder</span>, hellre än value.
+                </p>
+
+                <h2>Label</h2>
+
+
+                <h2>Widgets</h2>
+                <table class="borderless services">
+                    <thead>
+                        <tr>
+                            <th>Widget</th>
+                            <th>HTML-kod</th>
+                            <th>Exempel på utseende</th>
+                            <th>Specifika attribut</th>
+                            <th>Kommentar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Textfält</td>
+                            <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">text</span>"<span class="htmlElement codetext">&gt</td>
+                            <td><input type="text" value="Hejsan"></td>
+                            <td><span class="htmlAttributeName codetext">placeholder<br>datalist<br>maxlength</span></td>
+                            <td><span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">text</span>" är default.</td>
+                        </tr>
+                        <tr>
+                            <td>Lösenord</td>
+                            <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">password</span>"<span class="htmlElement codetext">&gt</td>
+                            <td><input type="password" value="Hejsan"></td>
+                            <td><span class="htmlAttributeName codetext">maxlength</span></td>
+                            <td>Skyddar bara mot titt "över axeln".</td>
+                        </tr>
+                        <tr>
+                            <td>Checkbox</td>
+                            <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">checkbox</span>"<span class="htmlElement codetext">&gt</td>
+                            <td><input type="checkbox" name="färdmedel" value="Bil" checked> Bil<br>
+                                <input type="checkbox" name="färdmedel" value="Buss"> Buss</td>
+                            <td><span class="htmlAttributeName codetext">checked</span></td>
+                            <td><span class="htmlAttributeName codetext">name</span> grupperar.</td>
+                        </tr>
+                        <tr>
+                            <td>Radioknapp</td>
+                            <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">radio</span>"<span class="htmlElement codetext">&gt</td>
+                            <td><input type="radio" name="gender" value="male" checked> Män<br>
+                                <input type="radio" name="gender" value="female"> Quinna</td>
+                            <td><span class="htmlAttributeName codetext">checked</span></td>
+                            <td><span class="htmlAttributeName codetext">name</span> grupperar.</td>
+                        </tr>
+                        <tr>
+                            <td>Submit, annan knapp</td>
+                            <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">submit</span>"<span class="htmlElement codetext">&gt</span><br><br>
+                                <span class="htmlElement codetext">&ltbutton&gt</span>...<span class="htmlElement codetext">&lt/button&gt</span></td>
+                            <td><input type="submit" value="skicka"></td>
+                            <td></td>
+                            <td><span class="htmlAttributeName codetext">value</span> är text på knappen.</td>
+                        </tr>
+                        <tr>
+                            <td>Dolt fält</td>
+                            <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">hidden</span>"<span class="htmlElement codetext">&gt</td>
+                            <td>(självklart osynlig)</td>
+                            <td></td>
+                            <td>Meningslös utan <span class="htmlAttributeName codetext">value</span>.</td>
+                        </tr>
+                        <tr>
+                            <td>Nummer</td>
+                            <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">number</span>"<span class="htmlElement codetext">&gt</td>
+                            <td><input type="number"></td>
+                            <td><span class="htmlAttributeName codetext">min<br>max<br>step</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Slider</td>
+                            <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">range</span>"<span class="htmlElement codetext">&gt</td>
+                            <td><input type="range"></td>
+                            <td><span class="htmlAttributeName codetext">min<br>max<br>step</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Tid</td>
+                            <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">date</span>"<span class="htmlElement codetext">&gt</span></td>
+                            <td><input type="date"></td>
+                            <td><span class="htmlAttributeValue codetext">date<br>datetime-local<br>month<br>time<br>week<br></span></td>
+                            <td>Firefox och IE 11 eller tidigare har inte stöd för det här.</td>
+                        </tr>
+                        <tr>
+                            <td>Rullgardin Select-lista</td>
+                            <td><span class="htmlElement codetext">&ltselect</span> <span class="htmlAttributeName codetext">name</span>="foo"<span class="htmlElement codetext">&gt<br>&nbsp&nbsp&ltoption</span> <span class="htmlAttributeName codetext">value</span>="..."<span class="htmlElement codetext">&gt</span>...<span class="htmlElement codetext"><br>&nbsp&nbsp&lt/option&gt<br>&lt/select&gt</span></td>
+                            <td><select name="foo">
+                                    <option value="...">foo</option>
+                                    <option value="...">bar</option>
+                                </select></td>
+                            <td><span class="htmlAttributeName codetext">selected</span></td>
+                            <td><span class="htmlAttributeName" codetext>value</span> för server, text mellan taggarna för användaren.</td>
+                        </tr>
+                        <tr>
+                            <td>Textarea</td>
+                            <td><span class="htmlElement codetext">&lttextarea&gt</span>...<span class="htmlElement codetext">&lt/textarea&gt</span></td>
+                            <td><textarea rows="3" cols="20">Hejsan</textarea></td>
+                            <td><span class="cssPropertyName codetext">maxlenght</span><br>
+                                <span class="cssPropertyName codetext">rows</span> (undvik)<br>
+                                <span class="cssPropertyName codetext">cols</span> (undvik)</td>
+                            <td>HTML 4 krävde rows och cols men det sköts bättre via CSS. <br>Handtaget som ändrar storlek kan avaktiveras via CSS (<span class="cssPropertyName codetext">resize</span>).</td>
+                        </tr>
+                        <tr>
+                            <td>Email, URL</td>
+                            <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">email</span>"<span class="htmlElement codetext">&gt<br>&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">email</span>"<span class="htmlElement">&gt</span></td>
+                            <td>Som text men webbläsaren kan kontrollera att man matat in vettigt värde.</td>
+                            <td></td>
+                            <td>Påverkar vilket tangentbord som visas på vissa telefoner.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Formulärkontroll</h2>
+                <p>
+
+                </p>
+                <h2>Fieldset</h2>
+                <p>
+
+                </p>
+                <h2>Kontaktformulär</h2>
+                <p>
+
+                </p>
+                <h2>Avancerade formulär</h2>
+                <p>
+
+                </p>
             </article>
         </section>
-        <div class="freshcontainer">
-            <section>
-            </section>
-        </div>
     </div>
     <div id="footcontainer">
         <footer>
@@ -38,5 +261,8 @@
         </footer>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
 </html>

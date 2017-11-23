@@ -5,22 +5,230 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tabeller</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat|Noto+Sans" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Tabeller</h1>
-    </header>
-    <article id="special">
-        <p>
-            Nulla pharetra finibus semper. Phasellus interdum nunc eu metus tincidunt, nec accumsan mauris pellentesque. Etiam et nisi quis turpis faucibus cursus. Proin eu lacus nec lacus pellentesque dictum. Vestibulum rutrum odio metus. Fusce lacinia laoreet lorem, non faucibus nunc interdum eu. Donec vitae porttitor ex. Maecenas ultricies tortor vitae sagittis finibus. Vivamus aliquet, nulla quis hendrerit sollicitudin, arcu quam porttitor metus, vitae interdum magna dolor quis nibh. Etiam iaculis rutrum pharetra. Duis feugiat tortor lacus, fermentum congue nibh mattis non. Suspendisse vehicula aliquam porttitor. Sed molestie nibh vel ullamcorper tempus. Aenean pharetra tincidunt sapien, ac condimentum nibh aliquet nec.
-        </p>
+<body class="fresh">
+    <!-- Navigation -->
+    <nav class="navbar navbar-toggleable-md navbar-inverse" style="background-color:rgba(5, 101, 113, 1);">
+        <a class="navbar-brand" href="#">Webbutveckling 1</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-lable="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <div class="container navbar-nav">
+                <a class="nav-item nav-link" href="grund.html">Grund</a>
+                <a class="nav-item nav-link" href="teckenkodning.html">Teckenkodning</a>
+                <a class="nav-item nav-link" href="lists.html">Listor</a>
+                <a class="nav-item nav-link" href="table.html">Tabeller</a>
+                <a class="nav-item nav-link" href="forms.html">Formulär</a>
+                <a class="nav-item nav-link" href="#">Media</a>
+                <a class="nav-item nav-link" href="#">Javascript</a>
+            </div>
+        </div>
+    </nav>
 
-    </article>
-    <footer>
-        <ul>
-            <!--&copy visar symbolen Copyright, fler symboler kan du hitta på http://www.rapidtables.com/web/html/html-codes.htm-->
-            <li><p class="small">&copy - Victor Bohmies - Webbutveckling 1</p></li>
-        </ul>
-    </footer>
+    <!-- Jumbotron describing chapter -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Tabeller</h1>
+            <article>
+                <p class="introtext center">Det finns många fall att vilja göra en tabell, t.ex. för Sportresultat, deltagarlistor, anmälda till en utbildning, varor till salu, kalkyler, börskurser osv. En tabell är på sätt och vis en lista som bara vuxit till sig och fått två dimensioner.</p>
+            </article>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <section>
+            <article>
+                <h2>Grunden</h2>
+                <p>
+                Vi skapar oss en tabell över kända karaktärer ifrån serietidningsvärlden.<br>
+                Tabellen består av en <span class="htmlComment">rubrikrad</span> och fyra vanliga <span class="htmlComment">rader</span> men information placerad i två <span class="htmlComment">kolumner</span>. Detta är alltså en väldigt enkel tabell som demonstreras. Nedan ser HTML-koden.
+                </p>
+                <div class="codewindow">
+                    <span class="htmlElement">&lttable&gt<br>
+                        &nbsp&nbsp&ltthead&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lttr&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&ltth&gt</span>Förnamn<span class="htmlElement">&lt/th&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&ltth&gt</span>Efternamn<span class="htmlElement">&lt/th&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&ltth&gt</span>Ålder<span class="htmlElement">&lt/th&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt/tr&gt<br>
+                        &nbsp&nbsp&lt/thead&gt<br>
+                        &nbsp&nbsp&lttbody&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lttr&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lttd&gt</span>Kalle<span class="htmlElement">&lt/td&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lttd&gt</span>Anka<span class="htmlElement">&lt/td&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lttd&gt</span>24<span class="htmlElement">&lt/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt/tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lttr&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lttd&gt</span>Kajsa<span class="htmlElement">&lt/td&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lttd&gt</span>Anka<span class="htmlElement">&lt/td&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lttd&gt</span>24<span class="htmlElement">&lt/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt/tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lttr&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lttd&gt</span>Musse<span class="htmlElement">&lt/td&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lttd&gt</span>Pigg<span class="htmlElement">&lt/td&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lttd&gt</span>28<span class="htmlElement">&lt/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt/tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lttr&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lttd&gt</span>Mimmi<span class="htmlElement">&lt/td&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lttd&gt</span>Pigg<span class="htmlElement">&lt/td&gt<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lttd&gt</span>28<span class="htmlElement">&lt/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt/tr&gt<br>
+                        &nbsp&nbsp&lt/tbody&gt<br>
+                    &lt/table&gt</span>
+                </div>
+                <p>En tabell omsluts alltid av start- och sluttaggen <span class="htmlElement codetext">&lttable&gt&lt/table&gt</span> och innebörden är svår att missta sig på.</p>
+
+                <h2><code class="htmlElement">&ltthead&gt</code>, <code class="htmlElement ">&lttbody&gt</code>, <code class="htmlElement">&lttfoot&gt</code></h2>
+                <p>Alla tabeller har även ett huvud, <span class="htmlElement codetext">&ltthead&gt</span>, en kropp, <span class="htmlElement codetext">&lttbody&gt</span>, och en fot, <span class="htmlElement codetext">&lttfoot&gt</span>, även om taggarna skrivs med eller ej. Utelämnas taggarna så skapas de per automatik av webbläsaren.</p>
+                <p><span class="htmlElement codetext">&ltthead&gt</span> används för att gruppera rubrikrader och tabellen kan ha en eller flera.</p>
+                <p>Även <span class="htmlElement codetext">&lttbody&gt</span> kan finnas som en eller flera i en tabell och används för att gruppera. Man kan sortera en serietabell efter slutspelsplats, vanliga och nedflyttningsplats.</p>
+                <p><span class="htmlElement codetext">&lttfoot&gt</span> används med fördel för rader där det förekommer slutsummor eller andra avslutande uppgifter.</p>
+
+                <h3><code class="htmlElement codetext">&lttr&gt</code></h3>
+                <p>Varje <span class="htmlComment">rad</span> i tabellen motsvaras av elementet <span class="htmlElement codetext">&lttr&gt</span> - <span class="htmlComment">table row</span>.</p>
+
+                <h3><code class="htmlElement codetext">&ltth&gt</code></h3>
+                <p>Det finns två slags <span class="htmlComment">tabellceller</span> (<span class="htmlComment">table cells</span>), vanliga data-celler (nästa del) och rubrikceller. Normalt villa man åtminstone använda <span class="htmlComment">kolumnrubriker</span>. En enkel <span class="htmlElement codetext">&ltth&gt</span> - <span class="htmlComment">table heading</span> - som i koden ovan blir kolumnrubrik för den kolumn där den står.<br>
+                Texten i <span class="htmlElement codetext">&ltth&gt</span> blir normalt fet och centrerad.<br>
+                Vid utskrift ska en bra webbläsare kunna <span style="font-style:italic;">upprepa kolumnrubrikerna</span> på varje sida, om tabellen är så pass stor att den inte får plats på ett papper.<br>
+                Man kan också ange rubriker för enskilda rader. Det görs med attributet <span class="htmlAttributeName codetext">scope</span>.<br>
+                <code>
+                    <span class="htmlElement">&ltth</span> <span class="htmlAttributeName">scope</span>="<span class="htmlAttributeValue">row</span>"<span class="htmlElement">&gt</span>
+                </code><br>
+                <span class="htmlAttributeName codetext">Scope</span> kan sättas till <span class="htmlAttributeValue codetext">row</span>, <span class="htmlAttributeValue codetext">col</span>, <span class="htmlAttributeValue codetext">rowgroup</span> eller <span class="htmlAttributeValue codetext">colgroup</span>, men <span class="htmlAttributeValue codetext">col</span> är alltså <span class="htmlComment">default</span> (i praktiken) och därför onödigt att skriva ut. (Formellt är default-värdet <span class="htmlAttributeValue codetext">auto</span>.)
+                </p>
+
+                <h3><code class="htmlElement">&lttd&gt</code></h3>
+                <p><span class="htmlComment">Dataceller</span> - <span class="htmlComment">table data</span> - skrivs med taggen <span class="htmlElement codetext">&lttd&gt</span>.<br>
+                Ibland vill man att en cell skall sträcka sig över flera rader eller kolumner. Det kan åstadkommas med attributen <span class="htmlAttributeValue codetext">colspan</span> och <span class="htmlAttributeValue codetext">rowspan</span>.
+                </p>
+
+                <h3>Andra element och attribut för tabeller</h3>
+                <p>
+                    För vårt enkla exempel behövs inga fler element, men ibland kan man behöva ge ytterligare struktur eller information.<br>
+                    Med elementet <span class="htmlElement codetext">&ltcaption&gt</span> sätter man en tabellrubrik för hela tabellen.<br>
+                    Med elementen <span class="htmlElement codetext">&ltcol&gt</span> och <span class="htmlElement codetext">&ltcolgroup&gt</span> avser en kolumn eller grupp kolumner. Bara ett fåtal CSS-egenskaper kan styras utifrån dessa element, så dessa används ganska sällan.<br>
+                    Med kombinationen av attributen <span class="htmlAttributeName codetext">axis</span>, <span class="htmlAttributeName codetext">header</span> och <span class="htmlAttributeName codetext">id</span> kan man styra hur en tabells celler associeras med table header, när strukturen blir så komplex att attributen <span class="htmlAttributeName codetext">scope</span> inte räcker till för jobbet. Å andra sidan, skulle dessa behövas är det kanske bättre att förenkla tabellens struktur.
+                </p>
+            </article>
+            <article>
+                <h2>Tabeller och CSS</h2>
+                <p>
+                Grundinställningarna för en tabell och dess celler är dess:
+                <ul>
+                    <li>En tabell och dess celler är normalt så stora som det krävs för att visa innehållet.</li>
+                    <li>Bredden på kolumner justeras automatiskt efter innehållet. Radbrytning sker om bredden kommer upp till 100%.</li>
+                    <li>Höjden på raderna justeras automatiskt efter innehållet.</li>
+                    <li>Varken tabell eller celler har kantlinjer.</li>
+                    <li>Det finns ett avstånd - <span class="cssPropertyName codetext">border-spacing</span> - mellan cellerna.</li>
+                </ul>
+                Här kommer det exempel vi skrev tidigare, förutom  att vi tilldelat tabellen två klasser,<br>
+                <code><span class="htmlElement codetext">&lttable</span> <span class="htmlAttributeName">class</span>="<span class="htmlAttributeValue">borderless services</span>"<span class="htmlElement codetext">&gt</span></code> så ser HTML-koden likadan ut.
+                </p>
+                <table class="borderless services" id="example">
+                    <thead>
+                        <tr>
+                            <th>Förnamn</th>
+                            <th>Efternamn</th>
+                            <th>Ålder</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kalle</td>
+                            <td>Anka</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>Kajsa</td>
+                            <td>Anka</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>Musse</td>
+                            <td>Pigg</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>Mimmi</td>
+                            <td>Pigg</td>
+                            <td>28</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                För att få vår tabell att bli så fin så behövs det sättas en stil. Jag vill gärna att tabellen hålls ganska stilren och det gör jag först och främst med schemat nedan.
+                </p>
+                <div class="codewindow">
+                    <span class="cssElement">table</span> {<br>
+                        &nbsp&nbsp<span class="cssPropertyName">margin-bottom</span>: <span class="cssPropertyValue">1.4em</span>;<br>
+                        &nbsp&nbsp<span class="cssPropertyName">width</span>: <span class="cssPropertyValue">100%</span>;<br>
+                    }<br>
+                    <span class="cssClass">.borderless</span> {<br>
+                        &nbsp&nbsp<span class="cssPropertyName">*border-collapse</span>: <span class="cssPropertyValue">collapse</span>; /* Fulhack för IE7 och lägre */<br>
+                        &nbsp&nbsp<span class="cssPropertyName">border-spacing</span>: <span class="cssPropertyValue">0</span>;<br>
+                    }<br>
+                    <span class="cssClass">.services</span> {<br>
+                        &nbsp&nbsp<span class="cssPropertyName">border</span>: <span class="cssPropertyValue">1px solid #333</span>;<br>
+                        &nbsp&nbsp<span class="cssPropertyName">background</span>: <span class="cssPropertyValue">#f4f6f7</span>;<br>
+                        &nbsp&nbsp<span class="cssPropertyName">width</span>: <span class="cssPropertyValue">96%</span>;<br>
+                        &nbsp&nbsp<span class="cssPropertyName">margin</span>: <span class="cssPropertyValue">5% auto 2em</span>;<br>
+                        &nbsp&nbsp<span class="cssPropertyName">border-radius</span>: <span class="cssPropertyValue">5px</span>;<br>
+                        &nbsp&nbsp<span class="cssPropertyName">box-shadow</span>: <span class="cssPropertyValue">0 0 4px rgba(0, 0, 0, 0.2)</span>;<br>
+                        &nbsp&nbsp<span class="cssPropertyName">text-shadow</span>: <span class="cssPropertyValue">#fff 1px 1px 1px</span>;<br>
+                    }<br>
+                    <span class="cssElement">thead</span> {<br>
+                        &nbsp&nbsp<span class="cssPropertyName">font-size</span>: <span class="cssPropertyValue">150%</span>;<br>
+                    }<br>
+                    <span class="cssElement">th, td, caption</span> {<br>
+                        &nbsp&nbsp<span class="cssPropertyName">padding</span>: <span class="cssPropertyValue">18px 28px 18px</span>;<br>
+                    }<br>
+                    <span class="cssElement">th</span> {<br>
+                        &nbsp&nbsp<span class="cssPropertyName">padding-top</span>: <span class="cssPropertyValue">22px</span>;<br>
+                        &nbsp&nbsp<span class="cssPropertyName">background</span>: <span class="cssPropertyValue">#ddd</span>;<br>
+                    }<br>
+                    <span class="cssElement">td</span> {<br>
+                        &nbsp&nbsp<span class="cssPropertyName">border-top</span>: <span class="cssPropertyValue">1px solid #333</span>;<br>
+                        &nbsp&nbsp<span class="cssPropertyName">border-right</span>: <span class="cssPropertyValue">1px solid #333</span>;<br>
+                    }
+                </div>
+                <h3>Markera utpekade rader</h3>
+                <p>Även om en tabell är väldigt ren så kan vissa effekter vara behövliga. Ett gott exempel är att "highlighta" en rad om man pekar på den med muspekaren eller om den är ett mål för intern länkning. För att <span class="codetext cssClass">:hover</span> skall vinna över <span class="codetext cssClass">:target</span> så sätter vi den sist av de två.<br>
+                Vi mjukar även upp färgskiftningen så att det blir behagligare att se med intoning via egenskapen <span class="cssPropertyName">transition</span>.</p>
+                <div class="codewindow">
+                    <span class="cssElement">tr</span> {<br>
+                        &nbsp&nbsp<span class="cssPropertyName">-webkit-transition</span>: <span class="cssPropertyValue">background-color 2s</span>;<br>
+                        &nbsp&nbsp<span class="cssPropertyName">-moz-transition</span>: <span class="cssPropertyValue">background-color 2s</span>;<br>
+                        &nbsp&nbsp<span class="cssPropertyName">-ms-transition</span>: <span class="cssPropertyValue">background-color 2s</span>;<br>
+                        &nbsp&nbsp<span class="cssPropertyName">-o-transition</span>: <span class="cssPropertyValue">background-color 2s</span>;<br>
+                    }<br>
+                    <span class="cssElement">tr</span><span class="cssClass">:target</span> {<br>
+                        &nbsp&nbsp<span class="cssPropertyName">background-color</span>: <span class="cssPropertyValue">#056571</span>;<br>
+                    }<br>
+                    <span class="cssElement">tr</span><span class="cssClass">:hover</span> {<br>
+                        &nbsp&nbsp<span class="cssPropertyName">background-color</span>: <span class="cssPropertyValue">#FF6A5C</span>;<br>
+                    }
+                </div>
+                <h3>Zebra</h3>
+                <p>Ett annat sätt att hjälpa ögat följa rader är att ge varannan rad en annan bakgrundsfärg. Detta kallas <span class="htmlComment">zebra-striping</span>. Följande kod är <strong>inte använd på tabellen i exemplet</strong>, men illustrerar hur det görs.</p>
+                <div class="codewindow">
+                    <span class="cssElement">tr</span><span class="cssClass">:nth-child(odd)</span> {<br>
+                        &nbsp&nbsp<span class="cssPropertyName">background-color</span>: <span class="cssPropertyValue">#61D7A4</span>;<br>
+                    }<br>
+                    <span class="cssElement">tr</span><span class="cssClass">:nth-child(even)</span> {<br>
+                        &nbsp&nbsp<span class="cssPropertyName">background-color</span>: <span class="cssPropertyValue">#FF9B73</span>;<br>
+                    }
+                </div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
 </html>
