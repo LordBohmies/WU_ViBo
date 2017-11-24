@@ -486,6 +486,7 @@ code {
 	font-size: 1.5em;
 }
 
+/* Window */
 .codewindow {
 	background-color: rgba(192, 192, 192, .5);
 	color: black;
@@ -496,6 +497,7 @@ code {
 	font-size: 1.5em;
 }
 
+/* HTML-Code */
 .htmlElement {
 	color: purple;
 }
@@ -503,28 +505,53 @@ code {
 .htmlAttributeName {
 	color: darkgreen;
 }
+
 .htmlAttributeValue {
 	color: darkblue;
 }
+
 .htmlComment {
 	color: darkred;
 	font-style: italic;
 }
+
+/* CSS-Code */
 .cssElement {
 	color: red;
 }
+
 .cssClass {
 	color: blue;
 	font-style: italic;
 }
+
 .cssId {
 	color: blue;
 }
+
 .cssPropertyName {
 	color: green;
 }
+
 .cssPropertyValue {
 	color: blue;
+}
+
+/* JS-Code */
+.jsDeclare {
+	color: darkgreen;
+}
+
+.jsValue {
+	color: DarkGoldenRod;
+}
+
+.js {
+	color:;
+}
+
+.jsText {
+	color: MidnightBlue;
 }
 /* ====== EXAMPLE ===================== */
 #ListsMenuExample {

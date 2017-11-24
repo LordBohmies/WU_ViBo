@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ljud & Bild</title>
+    <title>Media</title>
+    <!-- - - - - - - CSS - - - - - - -->
+    <!-- - - - - - -RESET- - - - - - -->
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <!-- - - - - - IMPORTED- - - - - -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!-- - - - - - - YOUR- - - - - - -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- - - - - - FONTS - - - - - -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat|Noto+Sans" rel="stylesheet"> <!-- Imported from dafont -->
 </head>
-<body>
-    <header>
-        <h1>Ljud & Bild</h1>
-    </header>
-    <nav class="navbar navbar-toggleable-md navbar-light" style="background-color:rgba(5, 101, 113, 1);">
+<body class="fresh">
+    <!-- - - - - - - - - - - - - - - -
+    - - - - - - - HEADER - - - - - - -
+    - - - - - - - - - - - - - - - - -->
+    <!-- - - - - NAVIGATION - - - - -->
+    <nav class="navbar navbar-toggleable-md navbar-inverse" style="background-color:rgba(5, 101, 113, 1);">
+        <a class="navbar-brand" href="#">Webbutveckling 1</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-lable="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -19,24 +31,63 @@
                 <a class="nav-item nav-link" href="grund.html">Grund</a>
                 <a class="nav-item nav-link" href="teckenkodning.html">Teckenkodning</a>
                 <a class="nav-item nav-link" href="lists.html">Listor</a>
-                <a class="nav-item nav-link" href="#">Tabeller</a>
+                <a class="nav-item nav-link" href="table.html">Tabeller</a>
                 <a class="nav-item nav-link" href="forms.html">Formulär</a>
-                <a class="nav-item nav-link" href="#">Media</a>
-                <a class="nav-item nav-link" href="#">Javascript</a>
+                <a class="nav-item nav-link active" href="media.html">Media</a>
+                <a class="nav-item nav-link" href="js.html">Javascript</a>
             </div>
         </div>
     </nav>
-    <article id="special">
-        <p>
-            Nulla pharetra finibus semper. Phasellus interdum nunc eu metus tincidunt, nec accumsan mauris pellentesque. Etiam et nisi quis turpis faucibus cursus. Proin eu lacus nec lacus pellentesque dictum. Vestibulum rutrum odio metus. Fusce lacinia laoreet lorem, non faucibus nunc interdum eu. Donec vitae porttitor ex. Maecenas ultricies tortor vitae sagittis finibus. Vivamus aliquet, nulla quis hendrerit sollicitudin, arcu quam porttitor metus, vitae interdum magna dolor quis nibh. Etiam iaculis rutrum pharetra. Duis feugiat tortor lacus, fermentum congue nibh mattis non. Suspendisse vehicula aliquam porttitor. Sed molestie nibh vel ullamcorper tempus. Aenean pharetra tincidunt sapien, ac condimentum nibh aliquet nec.
-        </p>
 
-    </article>
-    <footer>
-        <ul>
-            <!--&copy visar symbolen Copyright, fler symboler kan du hitta på http://www.rapidtables.com/web/html/html-codes.htm-->
-            <li><p class="small">&copy - Victor Bohmies - Webbutveckling 1</p></li>
-        </ul>
-    </footer>
+    <!-- - - - - JUMBOTRON - - - - -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Tabeller</h1>
+            <article>
+                <p class="introtext center">Det finns många fall att vilja göra en tabell, t.ex. för Sportresultat, deltagarlistor, anmälda till en utbildning, varor till salu, kalkyler, börskurser osv. En tabell är på sätt och vis en lista som bara vuxit till sig och fått två dimensioner.</p>
+            </article>
+        </div>
+    </div>
+
+    <!-- - - - - - - - - - - - - - - -
+    - - - - - - - CONTENT - - - - - - -
+    - - - - - - - - - - - - - - - - -->
+    <div class="container">
+        <section>
+            <article>
+                <h2></h2>
+                <p></p>
+                <h3></h3>
+                <p></p>
+            </article>
+
+            <article>
+                <h2></h2>
+                <p></p>
+                <h3></h3>
+                <p></p>
+            </article>
+        </section>
+    </div>
+
+    <!-- - - - - - - - - - - - - - - -
+    - - - - - - - FOOTER - - - - - - -
+    - - - - - - - - - - - - - - - - -->
+    <div id="footcontainer">
+        <footer>
+            <ul class="footerlist">
+                <!--&copy visar symbolen Copyright, fler symboler kan du hitta på http://www.rapidtables.com/web/html/html-codes.htm-->
+                <li><p id="smallprint">&copy - Victor Bohmies - Webbutveckling 1</p></li>
+            </ul>
+        </footer>
+    </div>
+
+<!-- - - - - - - - - - - - - - - -
+- - - - - - JAVASCRIPT - - - - - -
+- - - - - - - - - - - - - - - - -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 </body>
 </html>

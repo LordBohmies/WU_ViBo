@@ -5,22 +5,278 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript</title>
-</head>
-<body>
-    <header>
-        <h1>Javascript</h1>
-    </header>
-    <article id="special">
-        <p>
-            Nulla pharetra finibus semper. Phasellus interdum nunc eu metus tincidunt, nec accumsan mauris pellentesque. Etiam et nisi quis turpis faucibus cursus. Proin eu lacus nec lacus pellentesque dictum. Vestibulum rutrum odio metus. Fusce lacinia laoreet lorem, non faucibus nunc interdum eu. Donec vitae porttitor ex. Maecenas ultricies tortor vitae sagittis finibus. Vivamus aliquet, nulla quis hendrerit sollicitudin, arcu quam porttitor metus, vitae interdum magna dolor quis nibh. Etiam iaculis rutrum pharetra. Duis feugiat tortor lacus, fermentum congue nibh mattis non. Suspendisse vehicula aliquam porttitor. Sed molestie nibh vel ullamcorper tempus. Aenean pharetra tincidunt sapien, ac condimentum nibh aliquet nec.
-        </p>
+    <!-- - - - - - - CSS - - - - - - -->
+    <!-- - - - - - -RESET- - - - - - -->
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <!-- - - - - - IMPORTED- - - - - -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!-- - - - - - - YOUR- - - - - - -->
+    <link rel="stylesheet" href="../assets/css/style.css">
 
-    </article>
-    <footer>
-        <ul>
-            <!--&copy visar symbolen Copyright, fler symboler kan du hitta på http://www.rapidtables.com/web/html/html-codes.htm-->
-            <li><p class="small">&copy - Victor Bohmies - Webbutveckling 1</p></li>
-        </ul>
-    </footer>
+    <!-- - - - - - FONTS - - - - - -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat|Noto+Sans" rel="stylesheet"> <!-- Imported from dafont -->
+</head>
+<body class="fresh">
+    <!-- - - - - - - - - - - - - - - -
+    - - - - - - - HEADER - - - - - - -
+    - - - - - - - - - - - - - - - - -->
+    <!-- - - - - NAVIGATION - - - - -->
+    <nav class="navbar navbar-toggleable-md navbar-inverse" style="background-color:rgba(5, 101, 113, 1);">
+        <a class="navbar-brand" href="#">Webbutveckling 1</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-lable="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <div class="container navbar-nav">
+                <a class="nav-item nav-link" href="grund.html">Grund</a>
+                <a class="nav-item nav-link" href="teckenkodning.html">Teckenkodning</a>
+                <a class="nav-item nav-link" href="lists.html">Listor</a>
+                <a class="nav-item nav-link" href="table.html">Tabeller</a>
+                <a class="nav-item nav-link" href="forms.html">Formulär</a>
+                <a class="nav-item nav-link" href="media.html">Media</a>
+                <a class="nav-item nav-link active" href="js.html">Javascript</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- - - - - JUMBOTRON - - - - -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>JavaScript</h1>
+            <article>
+                <p class="introtext center">
+                    Det brukar inte dröja innan man som utvecklar petar in JavaScript på sin sida. Det brukar var för att få någon effekt på ett bildspel, en rullgardinsmeny, flikar etc.
+                </p>
+            </article>
+        </div>
+    </div>
+
+    <!-- - - - - - - - - - - - - - - -
+    - - - - - - - CONTENT - - - - - - -
+    - - - - - - - - - - - - - - - - -->
+    <div class="container">
+        <section>
+            <article>
+                <h2>Ett enkelt exempel</h2>
+                <div class="codewindow">
+                    <span class="jsDeclare">var</span> <span class="jsValue">name</span> = prompt(<span class="jsText">"Vad heter du?"</span>);<br>
+                    alert(<span class="jsText">"Du heter"</span> + <span class="jsValue">name</span> + <span class="jsText">" och ditt namn är "</span> + <span class="jsValue">name</span>.<span class="jsDeclare">length</span> + <span class="jsText">" tecken lång"</span>);
+                </div>
+                <p>
+                    I koden ovan så,
+                    <ul>
+                        <li><span class="htmlComment">Deklareras</span> en variabel (<span class="jsValue codetext">name</span>) som...</li>
+                        <li><span class="htmlComment">Tilldelas</span> ett värde, nämligen...</li>
+                        <li>Det som användaren skriver in när en frågeruta (<strong>prompt</strong>) dyker upp.</li>
+                        <li>En annan ruta (<strong>alert</strong>) poppar sedan upp med en text där flera textsträngar slagits samman.</li>
+                    </ul>
+                    Funktionerna <strong>prompt</strong> och <strong>alert</strong> är exempel på <span class="htmlComment">the Browser Object Model</span>. De är inbyggda i webbläsaren och kan kommas åt på det här viset genom skript.<br>
+                    Variabeldeklartionen, tilldelningen, sammanslagning av strängarna och egenskapen <span class="jsDeclare codetext">length</span> på variabeln <span class="jsValue codetext">name</span> är rent JavaScript.<br>
+                    Variabeln <span class="jsValue codetext">name</span> illustrerar ett problem med dåliga skript. Det är mycket troligt att två skilda skript skulle vilja använda det variabelnamnet, men i så fall kommer de kanske förstöra funktionen för varandra.<br>
+                    Det kanske låter krångligt att hålla kolla på allt så här tidigt, men kom ihåg att du inte behöver skriva några egna skript.
+                </p>
+            </article>
+
+            <article>
+                <h2>Skript-elementet i HTML</h2>
+                <p>
+                    För att infoga skript så används HTML-kod likt denna:
+                    <div class="codewindow">
+                        <span class="htmlElement">&ltscript</span> <span class="htmlAttributeName">src</span><span class="htmlAttributeValue">="http://code.jquery.com/jquery-1.7.2.min.js"</span><span class="htmlElement">&gt&lt/script&gt</span><br>
+                        <span class="htmlElement">&ltscript&gt</span><br>
+                            &nbsp&nbsp// Skriv kod här<br>
+                        <span class="htmlElement">&lt/script&gt</span>
+                    </div>
+                    Som synes finns det två varianter. Man kan inte kombinera dem. Antingen:
+                    <ul>
+                        <li>Finns skriptet i en extern fil som läses in med attributet <span class="htmlAttributeName codetext">src</span>. Detta är oftast det bästa alternativet eftersom man då kan återanvända samma skript på flera sidor, på samma sätt som man vill göra med sin CSS. Eller så...</li>
+                        <li>Finns koden mellan start- och sluttagg</li>
+                    </ul>
+                    Du måste alltid använda både start- och sluttaggen för <span class="htmlElement codetext">&ltscript&gt</span>
+                </p>
+
+                <h3>Attributet language är bara fel</h3>
+                <p>
+                    Ibland ser man starttaggar som denna:
+                    <div class="codewindow">
+                        <span class="htmlElement">&ltscript</span> <span class="htmlAttributeName">language</span><span class="htmlAttributeValue">="javascript"</span><span class="htmlElement">&gt</span>
+                    </div>
+                    Attributet <span class="htmlAttributeName codetext">language</span> var tänkt för att skilja JavaScript från andra tänkbara språk som kunde bli aktuella. Ett tag försökte <strong>Microsoft</strong> få oss att använda <strong>VBScript</strong> i webbläsaren och <strong>Google</strong> försökte få oss att använda <strong>Dart</strong>. Båda språken har blivit måttligt mottagna. VBScript har t.o.m lagts ner helt.
+                </p>
+
+                <h3>Attributet type är OK men oftast onödigt</h3>
+                <p>
+                    <div class="codewindow">
+                        <span class="htmlElement">&ltscript</span> <span class="htmlAttributeName">type</span><span class="htmlAttributeValue">="text/ecmascript; version=8"</span><span class="htmlElement">&gt</span>
+                    </div>
+                    Skulle du mot förmodan behöva ange version, så ska attributet <span class="htmlAttributeName">type</span> användas.
+                </p>
+
+                <h3>Man behöver inte gömma skripten i HTML-kommentarer</h3>
+                <p>
+                    Det här rekommenderas på vissa sidor. För att förhindra webbläsare som inte stödjer JavaScript från att visa koden som om den vore sidinnehåll så behöver du gömma den med kommentarer:
+                    <div class="codewindow">
+                        <span class="htmlElement">&ltscript</span> <span class="htmlAttributeName">type</span><span class="htmlAttributeValue">="text/javascript"</span><span class="htmlElement">&gt</span><br>
+                        <strong>&lt!--</strong><br>
+                        <strong>document.getElementById("demo").innerHTML=Date();</strong><br>
+                        <strong>--&gt</strong><br>
+                        <span class="htmlElement">&lt/script&gt</span>
+                    </div>
+                    Detta har sagts sedan 1996. Och <strong>då</strong> var det sant. När <strong>Netscape</strong> introducerade JavaScript så var det nödvändigt att dölja koden på detta sätt för webbläsare som saknade stöd för elementet <span class="htmlElement codetext">&ltscript&gt</span>. Några sådana webbläsare har dock inte varit i bruk på över ett decennium och rådet är således helt föråldrat.
+                </p>
+
+                <h3>Var placerar man <span class="htmlElement codetext">&ltscript&gt</span>?</h3>
+                <p>
+                    JavaScript <strong>kan</strong> infogas i både <span class="htmlElement codetext">&lthead&gt</span> och <span class="htmlElement codetext">&ltbody&gt</span>. I båda fallen <strong>bör</strong> taggarna stå på slutet, precis före sluttaggen. Problemet med skript i <span class="htmlElement codetext">&lthead&gt</span> är att under tiden webbläsaren hämtar in skripten och tolkar dem, så <strong>låser</strong> man normalt webbläsaren från att tolka övrig kod (<span class="htmlComment">parsing</span>) och rita upp resultatet på skärmen (<span class="htmlComment">painting</span>). Det ger användaren en långsammare sida och därmed en sämre upplevelse.<br>
+                    Alltså utgå från att <strong>bästa placeringen är sist i &ltbody&gt</strong>, om du inte har något <strong>synnerligt</strong> skäl att placera skripten tidigare.
+                </p>
+
+                <h3>Undvik pseudoprotokollet javascript</h3>
+                <p>
+                    JavaScript kan också infogas med <span class="htmlComment">pseudoprotokoll</span>. Då ser koden ut så här:
+                    <div class="codewindow">
+                        <span class="htmlElement">&lta</span> <span class="htmlAttributeName">href</span>="<span class="htmlAttributeValue">javascript: foo()</span>"<span class="htmlElement">&gt</span>
+                    </div>
+                    Tekniken är djupt problematisk av flera skäl:
+                    <ul>
+                        <li>Den bryter mot principen om att skilja olika slags logik = svårunderhållen kod.</li>
+                        <li>Användare som inte har JavaScript aktiverat kan inte göra något alls.</li>
+                        <li>Resultatet är sällan <span class="htmlComment">tillgängligt</span>.</li>
+                        <li>Kodmönstret ger lätt upphov till säkerhetsproblem.</li>
+                    </ul>
+                    Om en funktion kräver JavaScript, så skapa den med JavaScript. Antingen så är det dessutom så att du här vill skapa en <span class="htmlComment">knapp</span> och inte en <span class="htmlComment">länk</span>.
+                </p>
+            </article>
+            <article>
+                <h2>JavaScript, JScript och ECMAScript</h2>
+                <p>
+                    JavaScript skapades av <strong>Brendon Eich</strong>, för <strong>Netscape Navigator 2.0</strong>. Det gick rasande fort och företagets chefer bestämde att det skulle släppas innan en del underligheter hade hunnit åtgärdas. Under utvecklingen kallades språket först för <strong>Mocha</strong> och sedan för <strong>LiveScript</strong>, men namnet sattes till JavaScript av marknadsföringsskäl. Det skulle låta som <strong>Java</strong>, som hade seglat upp som det häftiga innespråket, trots att de två språken skiljer sig markant åt.<br>
+                    Namnet kom att innehas av <strong>Sun</strong>, eftersom de ägde det liknande namnet Java. (Sun har idag uppgått i <strong>Oracle</strong>.) Microsoft skapade snart en kopia, men blev tvungna att använda ett eget namn. De kallar därför sin implementation för <strong>JScript</strong>. Man var så noggranna med sing härmning (<span class="htmlComment">reverse engineering</span>) att man till och med duplicerade buggarna.<br>
+                    För att hindra språket från att fragmenteras så tog Netscape det till standardiseringsorganet <strong>ECMA</strong>. Därför heter standarden <strong>ECMAScript (ES)</strong>. <br>
+                    När man anger <span class="htmlComment">versionsnummer</span> för JavaScript, så utgår man från numreringen i <strong>Netscape Navigator</strong> och, sedan den försvann, <strong>Firefox</strong>. I och med att Firefox gått över till en sexveckors uppdateringscykel, så används sällan några versionsnummer högre än 1.8.5. <br>
+                    Sedan 2011 så är det versionen av ECMAScript som är det intressanta. Alla idag använda webbläsare stödjer i princip <strong>ES 5.1</strong> från 2011. De flesta uppgraderingar som Firefox gjort under perioden 2000-2008, samt ett antal andra kloka tillägg blev <strong>ES 5.0</strong>. 2015 släpptes <strong>ES 6.0</strong> och 2016 släpptes <strong>ES 7.0</strong>, kallas också ECMAScript 2015 och ECMAScript 2016, men stöds delvis till dåligt av alla moderna webbläsare. <br>
+                    De har dessutom
+                </p>
+
+                <h3>"The good parts" och "use strict"</h3>
+                <p></p>
+                <
+                h3>ECMAScript harmony</h3>
+                <p></p>
+            </article>
+            <article>
+                <h2>DOM</h2>
+                <p>
+                    Det finns tillfällen då inbyggda funktioner som alert och prompt kan användas, men vanligtvis så vill man hämta och lämna informationen direkt på sidan, i dokumentet. <span class="htmlComment">Dokumentsobjektsmodellen, DOM</span>, låter oss göra just detta.
+                    <br>
+                    Om du går in på <strong>http://sv.wikipedia.org/wiki/Ystad</strong> och sedan öppnar konsolen och skriver:
+                    <div class="codewindow">
+                        <strong>document.getElementByTagName(</strong><span class="htmlElement">"h1"</span><strong>)[0].innerHTML = </strong><span class="htmlElement">"Haparanda"</span>
+                    </div>
+                    Så kommer du ändra innehållet i den första (nummer "noll") <span class="htmlElement codetext">&lth1&gt</span> som finns på sidan. <br>
+                    DOM standardiseras av <strong>W3C</strong> och inte av ECMA, men fram till 2012 var vissa delar bara <span class="htmlComment">de facto</span> standarder. De introducerades främst av Netscape, men också i viss mån av Microsoft, och sedan har man härmat varandra. <br>
+                    Den de facto standard för DOM som infördes i Netscape Navigator 3.0 kallas ofta för <strong>DOM 0</strong>. Att säga så är mycket vanligt, men det finns alltså ingen officiell DOM 0 standard. <br>
+                    W3C har skapat fyra versioner av DOM och nyligen (2017-11-02) introducerades 4.1.
+                </p>
+
+                <h3>Undvik document.write()</h3>
+                <p>
+                    När JavaScript var nytt, så låg skripten oftast inblandade i HTML-koden och resultatet "skrevs" på platsen där det skulle finnas. Lösningen är flerfaldigt usel:
+                    <ul>
+                        <li>Dålig prestanda: Dokumentet slutar att laddas och måste ofta tolkas på nytt av webbläsaren.</li>
+                        <li>Oflexibel kod som lätt "går sönder" när sidan ändras det allra minsta.</li>
+                        <li>Mycket svårt att återanvända koden på flera sidor.</li>
+                    </ul>
+                </p>
+            </article>
+            <article>
+                <h2>Händelser</h2>
+                <p></p>
+
+                <h3>Inline event handlers</h3>
+                <p></p>
+
+                <h3>DOM 0 event handlers</h3>
+                <p></p>
+
+                <h3>DOM 2+ event listeners</h3>
+                <p></p>
+
+                <h3>Händelsehantering med bibliotek</h3>
+                <p></p>
+            </article>
+            <article>
+                <h2>Bibliotek</h2>
+                <p>
+                    Sannolikt har någon annan webbutvecklare haft samma problem att lösa som du har. Varför inte återanvända goda lösnignar? Detta är grundtanken bakom <span class="htmlComment">biblioteken (libraries)</span>. Vad de vanliga biblioteken gör är bland annat:
+                    <ul>
+                        <li><span class="htmlComment">Normalisering</span> av DOM så att den fungerar likadant i alla webbläsare - när man anropar den via bibliotek.</li>
+                        <li><span class="htmlComment">Färdiga funktioner</span> för alla vanliga uppgifter, inklusive Ajax.</li>
+                        <li><span class="htmlComment">Effektbibliotek</span> - animationer, visa/dölj effekter, sortering av tabeller etc.</li>
+                        <li><span class="htmlComment">Widgets</span> - d.v.s ytterligare formulärelement, såsom sliders, "date pickers" etc. Somliga av dessa finns i HTML5, men webbläsarstödet är ännu inte helt utbrett.</li>
+                        <li><span class="htmlComment">Förenklad syntax</span> (smaksak). Du såg kanske hur kort jQuery-koden ovan blev jämfört med de andra alernativen. I just jQuery kan man också "kedja ihop" (<span class="htmlComment">chaining</span>) flera saker på rad.</li>
+                        <li><span class="htmlComment">Inbyggt stöd för ARIA</span></li>
+                    </ul>
+                </p>
+                <p>
+                    Exempel på vanliga bibliotek:
+                    <ul>
+                        <li><strong>jQuery</strong> är överlägset vanligast och har hur många tilläggsmoduler som helst.</li>
+                        <li><strong>YOI</strong> Yahoo User Interface Library.</li>
+                        <li><strong>Dojo</strong> - har det bästa stödet för ARIA.</li>
+                        <li><strong>Motools</strong>.</li>
+                        <li><strong>Closure</strong> från google.</li>
+                        <li><strong>Prototype</strong> används ofta ihop med effektbiblioteket <strong>Scriptacolous</strong>.</li>
+                    </ul>
+                    Försökt hålla dig till ett bibliotek, ty varje bibliotek tynger ner webbplatsens bandbredd.
+                </p>
+                <h3>Content Delivery Networks</h3>
+                <p>
+                    Om du använder bibliotek, så är sannolikheten stor att dina användare redan varit på en annan sida där samma bibliotek använts. För att slippa belasta din server och snabba upp användarens upplevelse så kan man använda sig av ett <span class="htmlComment">CDN - Content Delivery Network</span>.<br>
+                    Detta innebär att du hänvisar till en adress som tillhandahålls av Google, Microsoft eller något annan storföretag. Deras servrar är placerade över hela världen och levererar data med största möjliga hastighet. Det innebär att man inte bara vinner fart på grund av <span class="htmlComment">cachningen</span>, utan även för att CDN-servrarna i sig är snabbare än din egen webbserver!
+                </p>
+            </article>
+            <article>
+                <h2>Ett exempel med JQuery</h2>
+                <p></p>
+
+                <h3>HTML-kod för slider</h3>
+                <p></p>
+
+                <h3>Nivo-kod</h3>
+                <p></p>
+
+                <h3>Kompletterande CSS</h3>
+                <p></p>
+            </article>
+        </section>
+    </div>
+    <!--<script type="text/javascript">
+    var name = prompt("Vad heter du?");
+    alert("Du heter" + name + " och ditt namn är " + name.length + " tecken lång");
+</script>-->
+
+    <!-- - - - - - - - - - - - - - - -
+    - - - - - - - FOOTER - - - - - - -
+    - - - - - - - - - - - - - - - - -->
+    <div id="footcontainer">
+        <footer>
+            <ul class="footerlist">
+                <!--&copy visar symbolen Copyright, fler symboler kan du hitta på http://www.rapidtables.com/web/html/html-codes.htm-->
+                <li><p id="smallprint">&copy - Victor Bohmies - Webbutveckling 1</p></li>
+            </ul>
+        </footer>
+    </div>
+
+<!-- - - - - - - - - - - - - - - -
+- - - - - - JAVASCRIPT - - - - - -
+- - - - - - - - - - - - - - - - -->
+<!-- - - - - - jQuery - - - - - -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<!-- - - - - - Tether - - - - - -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<!-- - - - - -Bootstrap - - - - -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 </body>
 </html>
