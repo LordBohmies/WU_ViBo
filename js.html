@@ -2,44 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JavaScript</title>
-    <!-- - - - - - - CSS - - - - - - -->
-    <!-- - - - - - -RESET- - - - - - -->
-    <link rel="stylesheet" href="../assets/css/normalize.css">
-    <!-- - - - - - IMPORTED- - - - - -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <!-- - - - - - - YOUR- - - - - - -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title></title>
 
-    <!-- - - - - - FONTS - - - - - -->
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat|Noto+Sans" rel="stylesheet"> <!-- Imported from dafont -->
+    <!-- +=================+ -->
+    <!-- |    CSS  AREA    | -->
+    <!-- +=================+ -->
+    <!-- |      RESET      | -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- |    IMPORTED     | -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- |    ICON AREA    | -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- |     CUSTOM      | -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- +=================+ -->
 </head>
-<body class="fresh">
-    <!-- - - - - - - - - - - - - - - -
-    - - - - - - - HEADER - - - - - - -
-    - - - - - - - - - - - - - - - - -->
-    <!-- - - - - NAVIGATION - - - - -->
-    <nav class="navbar navbar-toggleable-md navbar-inverse" style="background-color:rgba(5, 101, 113, 1);">
-        <a class="navbar-brand" href="#">Webbutveckling 1</a>
+<body>
+    <button type="button" onclick="topFunction()" id="TopButton" class="btn btn-info" title="Go to top">Top</button>
+    <!-- +=================+ -->
+    <!-- |   HEADER AREA   | -->
+    <!-- +=================+ -->
+    <header>
+    <!-- |   NAVIGATION    | -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand brand brand-border" href="http://www.bohmies.se">BOHMIES</a>
+        <a class="navbar-brand" href="wu_index.html"><i class="fa fa-home" aria-hidden="true"></i> </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-lable="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbar">
-            <div class="container navbar-nav">
-                <a class="nav-item nav-link" href="grund.html">Grund</a>
-                <a class="nav-item nav-link" href="teckenkodning.html">Teckenkodning</a>
-                <a class="nav-item nav-link" href="lists.html">Listor</a>
-                <a class="nav-item nav-link" href="table.html">Tabeller</a>
-                <a class="nav-item nav-link" href="forms.html">Formulär</a>
-                <a class="nav-item nav-link" href="media.html">Media</a>
-                <a class="nav-item nav-link active" href="js.html">Javascript</a>
-            </div>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="grund.html" id="DropdownGrund" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Grund</a>
+                    <div class="dropdown-menu" aria-labelledby="DropdownGrund">
+                        <a class="dropdown-item" href="grund.html#html">HTML</a>
+                        <a class="dropdown-item" href="grund.html#css">CSS</a>
+                        <a class="dropdown-item" href="grund.html#charset">Teckenkodning</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lists.html">Listor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="table.html">Tabeller</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="forms.html">Formulär</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="js.html">Javascript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="media.html">Media</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="DropdownAvailable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Responsiv</a>
+                    <div class="dropdown-menu" aria-labelledby="DropdownAvailable">
+                        <a class="dropdown-item" href="mobil.html">Mobil webb</a>
+                        <a class="dropdown-item" href="anpassad.html">Tillgänglighet</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="links.html">Länkar</a>
+                </li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <ul class="nomargin">
+                <a style="color: white;" href="https://github.com/LordBohmies" target="_blank"><i class="fa fa-github-alt fa-3x social-gh social" aria-hidden="true"></i></a>
+            </ul>
         </div>
     </nav>
+    </header>
+    <!-- +=================+ -->
 
-    <!-- - - - - JUMBOTRON - - - - -->
+    <!-- +=================+ -->
+    <!-- |   BANNER AREA   | -->
+    <!-- +=================+ -->
+    <!-- |    JUMBOTRON    | -->
     <div class="jumbotron">
         <div class="container">
             <h1>JavaScript</h1>
@@ -50,10 +92,11 @@
             </article>
         </div>
     </div>
+    <!-- +=================+ -->
 
-    <!-- - - - - - - - - - - - - - - -
-    - - - - - - - CONTENT - - - - - - -
-    - - - - - - - - - - - - - - - - -->
+    <!-- +=================+ -->
+    <!-- |  CONTENT  AREA  | -->
+    <!-- +=================+ -->
     <div class="container">
         <section>
             <article>
@@ -249,34 +292,111 @@
                 <h3>Kompletterande CSS</h3>
                 <p></p>
             </article>
+            <hr>
+            <p id="cd_example" class="center"></p>
         </section>
     </div>
-    <!--<script type="text/javascript">
-    var name = prompt("Vad heter du?");
-    alert("Du heter" + name + " och ditt namn är " + name.length + " tecken lång");
-</script>-->
+    <!-- +=================+ -->
 
-    <!-- - - - - - - - - - - - - - - -
-    - - - - - - - FOOTER - - - - - - -
-    - - - - - - - - - - - - - - - - -->
-    <div id="footcontainer">
-        <footer>
-            <ul class="footerlist">
-                <!--&copy visar symbolen Copyright, fler symboler kan du hitta på http://www.rapidtables.com/web/html/html-codes.htm-->
-                <li><p id="smallprint">&copy - Victor Bohmies - Webbutveckling 1</p></li>
-            </ul>
-        </footer>
+    <!-- +=================+ -->
+    <!-- |   FOOTER AREA   | -->
+    <!-- +=================+ -->
+    <footer class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-2">
+                    <ul class="list-unstyled clear-margins">
+                        <li class="widget-container widget_nav_menu">
+                            <h1 class="title-widget">Bohmies</h1>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-caret-right"></i> About us</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i> Blog</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i> Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <ul class="list-unstyled clear-margins">
+                        <li class="widget-container widget_nav_menu">
+                            <h1 class="title-widget">Webbutveckling 1</h1>
+                            <ul>
+                                <li><a href="grund.html"><i class="fa fa-caret-right"></i> Grund</a></li>
+                                <li><a href="lists.html"><i class="fa fa-caret-right"></i> Listor</a></li>
+                                <li><a href="table.html"><i class="fa fa-caret-right"></i> Tabeller</a></li>
+                                <li><a href="forms.html"><i class="fa fa-caret-right"></i> Formulär</a></li>
+                                <li><a href="js.html"><i class="fa fa-caret-right"></i> Javascript</a></li>
+                                <li><a href="media.html"><i class="fa fa-caret-right"></i> Media</a></li>
+                                <li><a href="mobil.html"><i class="fa fa-caret-right"></i> Mobil webb</a></li>
+                                <li><a href="anpassad.html"><i class="fa fa-caret-right"></i> Tillgänglighet</a></li>
+                                <li><a href="links.html"><i class="fa fa-caret-right"></i> Länkar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <ul class="list-unstyled clear-margins">
+                        <li class="widget-container widget_nav_menu">
+                            <h1 class="title-widget">GitHub</h1>
+                            <ul>
+                                <li><a href="https://github.com/LordBohmies/WSP_ViBo" target="_blank"><i class="fa fa-caret-right"></i> Webbserverprogrammering 1</a></li>
+                                <li><a href="https://github.com/LordBohmies/WU_ViBo" target="_blank"><i class="fa fa-caret-right"></i> Webbutveckling 1</a></li>
+                                <li><a href="" target=""><i class="fa fa-caret-right"></i> Webbutveckling 2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <ul class="list-unstyled clear-margins">
+                        <li class="widget-container widget_recent_news">
+                            <h1 class="title-widget">Contact Detail</h1>
+                            <div class="footerp">
+                                <h2 class="title-median">Bohmies.se</h2>
+                                <p><b>Email id:</b> <a href="mailto:victor@bohmies.se">victor@bohmies.se</a></p>
+                            </div>
+                            <div class="social-icons">
+                                <ul class="nomargin">
+                                    <a href="https://www.linkedin.com/in/victorbohmies/" target="_blank"><i class="fa fa-linkedin fa-3x social-li social"></i> </a>
+                                    <a href="https://twitter.com/MrBohmies" target="_blank"><i class="fa fa-twitter fa-3x social-tw social"></i> </a>
+                                    <a href="mailto:victor.bohmies@gmail.com" target="_blank"><i class="fa fa-envelope fa-3x social-em social"></i> </a>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="copyright">
+                        &copy 2017, Bohmies.se, All rights reserved.
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="design">
+                        <a href="http://www.bohmies.se" target="_blank">Web Design & Development by Victor Bohmies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- +=================+ -->
 
-<!-- - - - - - - - - - - - - - - -
-- - - - - - JAVASCRIPT - - - - - -
-- - - - - - - - - - - - - - - - -->
-<!-- - - - - - jQuery - - - - - -->
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<!-- - - - - - Tether - - - - - -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<!-- - - - - -Bootstrap - - - - -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
+    <!-- +=================+ -->
+    <!-- | JAVASCRIPT AREA | -->
+    <!-- +=================+ -->
+    <!-- |     JQUERY      | -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- |     POPPER      | -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- |    BOOTSTRAP    | -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- |     CUSTOM      | -->
+    <script src="assets/js/topbutton.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- +=================+ -->
 </body>
 </html>

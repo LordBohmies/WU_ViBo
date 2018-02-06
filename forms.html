@@ -2,57 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Listor</title>
-    <!-- - - - - - - CSS - - - - - - -->
-    <!-- - - - - - -RESET- - - - - - -->
-    <link rel="stylesheet" href="../assets/css/normalize.css">
-    <!-- - - - - - IMPORTED- - - - - -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <!-- - - - - - - YOUR- - - - - - -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title></title>
 
-    <!-- - - - - - FONTS - - - - - -->
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat|Noto+Sans" rel="stylesheet"> <!-- Imported from dafont -->
+    <!-- +=================+ -->
+    <!-- |    CSS  AREA    | -->
+    <!-- +=================+ -->
+    <!-- |      RESET      | -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- |    IMPORTED     | -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- |    ICON AREA    | -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- |     CUSTOM      | -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- +=================+ -->
 </head>
-<body class="fresh">
-    <!-- - - - - - - - - - - - - - - -
-    - - - - - - - HEADER - - - - - - -
-    - - - - - - - - - - - - - - - - -->
-    <!-- - - - - NAVIGATION - - - - -->
-    <nav class="navbar navbar-toggleable-md navbar-inverse" style="background-color:rgba(5, 101, 113, 1);">
-        <a class="navbar-brand" href="#">Webbutveckling 1</a>
+<body>
+    <button type="button" onclick="topFunction()" id="TopButton" class="btn btn-info" title="Go to top">Top</button>
+    <!-- +=================+ -->
+    <!-- |   HEADER AREA   | -->
+    <!-- +=================+ -->
+    <header>
+    <!-- |   NAVIGATION    | -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand brand brand-border" href="http://www.bohmies.se">BOHMIES</a>
+        <a class="navbar-brand" href="wu_index.html"><i class="fa fa-home" aria-hidden="true"></i> </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-lable="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbar">
-            <div class="container navbar-nav">
-                <a class="nav-item nav-link" href="grund.html">Grund</a>
-                <a class="nav-item nav-link" href="teckenkodning.html">Teckenkodning</a>
-                <a class="nav-item nav-link" href="lists.html">Listor</a>
-                <a class="nav-item nav-link" href="table.html">Tabeller</a>
-                <a class="nav-item nav-link active" href="forms.html">Formulär</a>
-                <a class="nav-item nav-link" href="media.html">Media</a>
-                <a class="nav-item nav-link" href="js.html">Javascript</a>
-            </div>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="grund.html" id="DropdownGrund" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Grund</a>
+                    <div class="dropdown-menu" aria-labelledby="DropdownGrund">
+                        <a class="dropdown-item" href="grund.html#html">HTML</a>
+                        <a class="dropdown-item" href="grund.html#css">CSS</a>
+                        <a class="dropdown-item" href="grund.html#charset">Teckenkodning</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lists.html">Listor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="table.html">Tabeller</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="forms.html">Formulär</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="js.html">Javascript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="media.html">Media</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="DropdownAvailable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Responsiv</a>
+                    <div class="dropdown-menu" aria-labelledby="DropdownAvailable">
+                        <a class="dropdown-item" href="mobil.html">Mobil webb</a>
+                        <a class="dropdown-item" href="anpassad.html">Tillgänglighet</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="links.html">Länkar</a>
+                </li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <ul class="nomargin">
+                <a style="color: white;" href="https://github.com/LordBohmies" target="_blank"><i class="fa fa-github-alt fa-3x social-gh social" aria-hidden="true"></i></a>
+            </ul>
         </div>
     </nav>
+    </header>
+    <!-- +=================+ -->
 
-    <!-- - - - - JUMBOTRON - - - - -->
+    <!-- +=================+ -->
+    <!-- |   BANNER AREA   | -->
+    <!-- +=================+ -->
+    <!-- |    JUMBOTRON    | -->
     <div class="jumbotron">
         <div class="container">
-            <h1>Listor</h1>
+            <h1>Formulär</h1>
             <article>
                 <p class="introtext center">Från enkla <span class="htmlComment">inloggningar</span> till avancerade <span class="htmlComment">nyttoprogram</span> så används <span class="htmlComment">formulär</span> (<span class="htmlComment">forms</span>). <span class="htmlComment">CMS:er</span> sköts via formulär. <span class="htmlComment">Bloggar</span>,  <span style="color:darkblue;">Facebook</span> och  <span style="color:darkblue;">Twitter</span> får sina data via formulär.<br>
                 I och med <span style="color:darkblue;">HTML5</span> och <span style="color:darkblue;">CSS 3</span>, så finns det numera så många olika element, attribut, egenskaper och selektorer att välja på att man lätt går vilse. Här finns varken plats eller någon nytta med att gå igenom allt i detalj. Vi satser på grunderna och avslutar med ett enkelt exempel.</p>
             </article>
         </div>
     </div>
+    <!-- +=================+ -->
 
-    <!-- - - - - - - - - - - - - - - -
-    - - - - - - - CONTENT - - - - - - -
-    - - - - - - - - - - - - - - - - -->
+    <!-- +=================+ -->
+    <!-- |  CONTENT  AREA  | -->
+    <!-- +=================+ -->
     <div class="container">
         <section>
             <article>
@@ -142,39 +185,39 @@
             <article>
                 <h2>Label</h2>
                 <p>
-
+Kommer snart...
                 </p>
             </article>
 
             <article>
                 <h2>Widgets</h2>
-                <table class="borderless services">
+                <table class="table table-responsive table-striped">
                     <thead>
                         <tr>
-                            <th>Widget</th>
-                            <th>HTML-kod</th>
-                            <th>Exempel på utseende</th>
-                            <th>Specifika attribut</th>
-                            <th>Kommentar</th>
+                            <th scope="col">Widget</th>
+                            <th scope="col">HTML-kod</th>
+                            <th scope="col">Exempel på utseende</th>
+                            <th scope="col">Specifika attribut</th>
+                            <th scope="col">Kommentar</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Textfält</td>
+                            <th scope="row">Textfält</th>
                             <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">text</span>"<span class="htmlElement codetext">&gt</td>
                             <td><input type="text" value="Hejsan"></td>
                             <td><span class="htmlAttributeName codetext">placeholder<br>datalist<br>maxlength</span></td>
                             <td><span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">text</span>" är default.</td>
                         </tr>
                         <tr>
-                            <td>Lösenord</td>
+                            <th scope="row">Lösenord</th>
                             <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">password</span>"<span class="htmlElement codetext">&gt</td>
                             <td><input type="password" value="Hejsan"></td>
                             <td><span class="htmlAttributeName codetext">maxlength</span></td>
                             <td>Skyddar bara mot titt "över axeln".</td>
                         </tr>
                         <tr>
-                            <td>Checkbox</td>
+                            <th scope="row">Checkbox</th>
                             <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">checkbox</span>"<span class="htmlElement codetext">&gt</td>
                             <td><input type="checkbox" name="färdmedel" value="Bil" checked> Bil<br>
                                 <input type="checkbox" name="färdmedel" value="Buss"> Buss</td>
@@ -182,7 +225,7 @@
                             <td><span class="htmlAttributeName codetext">name</span> grupperar.</td>
                         </tr>
                         <tr>
-                            <td>Radioknapp</td>
+                            <th scope="row">Radioknapp</th>
                             <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">radio</span>"<span class="htmlElement codetext">&gt</td>
                             <td><input type="radio" name="gender" value="male" checked> Män<br>
                                 <input type="radio" name="gender" value="female"> Quinna</td>
@@ -190,7 +233,7 @@
                             <td><span class="htmlAttributeName codetext">name</span> grupperar.</td>
                         </tr>
                         <tr>
-                            <td>Submit, annan knapp</td>
+                            <th scope="row">Submit, annan knapp</th>
                             <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">submit</span>"<span class="htmlElement codetext">&gt</span><br><br>
                                 <span class="htmlElement codetext">&ltbutton&gt</span>...<span class="htmlElement codetext">&lt/button&gt</span></td>
                             <td><input type="submit" value="skicka"></td>
@@ -198,35 +241,35 @@
                             <td><span class="htmlAttributeName codetext">value</span> är text på knappen.</td>
                         </tr>
                         <tr>
-                            <td>Dolt fält</td>
+                            <th scope="row">Dolt fält</th>
                             <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">hidden</span>"<span class="htmlElement codetext">&gt</td>
                             <td>(självklart osynlig)</td>
                             <td></td>
                             <td>Meningslös utan <span class="htmlAttributeName codetext">value</span>.</td>
                         </tr>
                         <tr>
-                            <td>Nummer</td>
+                            <th scope="row">Nummer</th>
                             <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">number</span>"<span class="htmlElement codetext">&gt</td>
                             <td><input type="number"></td>
                             <td><span class="htmlAttributeName codetext">min<br>max<br>step</span></td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>Slider</td>
+                            <th scope="row">Slider</th>
                             <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">range</span>"<span class="htmlElement codetext">&gt</td>
                             <td><input type="range"></td>
                             <td><span class="htmlAttributeName codetext">min<br>max<br>step</span></td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>Tid</td>
+                            <th scope="row">Tid</th>
                             <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">date</span>"<span class="htmlElement codetext">&gt</span></td>
                             <td><input type="date"></td>
                             <td><span class="htmlAttributeValue codetext">date<br>datetime-local<br>month<br>time<br>week<br></span></td>
                             <td>Firefox och IE 11 eller tidigare har inte stöd för det här.</td>
                         </tr>
                         <tr>
-                            <td>Rullgardin Select-lista</td>
+                            <th scope="row">Rullgardin Select-lista</th>
                             <td><span class="htmlElement codetext">&ltselect</span> <span class="htmlAttributeName codetext">name</span>="foo"<span class="htmlElement codetext">&gt<br>&nbsp&nbsp&ltoption</span> <span class="htmlAttributeName codetext">value</span>="..."<span class="htmlElement codetext">&gt</span>...<span class="htmlElement codetext"><br>&nbsp&nbsp&lt/option&gt<br>&lt/select&gt</span></td>
                             <td><select name="foo">
                                     <option value="...">foo</option>
@@ -236,7 +279,7 @@
                             <td><span class="htmlAttributeName" codetext>value</span> för server, text mellan taggarna för användaren.</td>
                         </tr>
                         <tr>
-                            <td>Textarea</td>
+                            <th scope="row">Textarea</th>
                             <td><span class="htmlElement codetext">&lttextarea&gt</span>...<span class="htmlElement codetext">&lt/textarea&gt</span></td>
                             <td><textarea rows="3" cols="20">Hejsan</textarea></td>
                             <td><span class="cssPropertyName codetext">maxlenght</span><br>
@@ -245,7 +288,7 @@
                             <td>HTML 4 krävde rows och cols men det sköts bättre via CSS. <br>Handtaget som ändrar storlek kan avaktiveras via CSS (<span class="cssPropertyName codetext">resize</span>).</td>
                         </tr>
                         <tr>
-                            <td>Email, URL</td>
+                            <th scope="row">Email, URL</th>
                             <td><span class="htmlElement codetext">&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">email</span>"<span class="htmlElement codetext">&gt<br>&ltinput</span> <span class="htmlAttributeName codetext">type</span>="<span class="htmlAttributeValue codetext">email</span>"<span class="htmlElement">&gt</span></td>
                             <td>Som text men webbläsaren kan kontrollera att man matat in vettigt värde.</td>
                             <td></td>
@@ -258,50 +301,133 @@
             <article>
                 <h2>Formulärkontroll</h2>
                 <p>
-
+Kommer snart...
                 </p>
             </article>
-
+Kommer snart...
             <article>
                 <h2>Fieldset</h2>
                 <p>
-
+Kommer snart...
                 </p>
             </article>
 
             <article>
                 <h2>Kontaktformulär</h2>
                 <p>
-
+Kommer snart...
                 </p>
             </article>
 
             <article>
                 <h2>Avancerade formulär</h2>
                 <p>
-
+                    Kommer snart...
                 </p>
             </article>
         </section>
     </div>
+    <!-- +=================+ -->
 
-    <!-- - - - - - - - - - - - - - - -
-    - - - - - - - FOOTER - - - - - - -
-    - - - - - - - - - - - - - - - - -->
-    <div id="footcontainer">
-        <footer>
-            <ul class="footerlist">
-                <!--&copy visar symbolen Copyright, fler symboler kan du hitta på http://www.rapidtables.com/web/html/html-codes.htm-->
-                <li><p id="smallprint">&copy - Victor Bohmies - Webbutveckling 1</p></li>
-            </ul>
-        </footer>
+    <!-- +=================+ -->
+    <!-- |   FOOTER AREA   | -->
+    <!-- +=================+ -->
+    <footer class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-2">
+                    <ul class="list-unstyled clear-margins">
+                        <li class="widget-container widget_nav_menu">
+                            <h1 class="title-widget">Bohmies</h1>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-caret-right"></i> About us</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i> Blog</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i> Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <ul class="list-unstyled clear-margins">
+                        <li class="widget-container widget_nav_menu">
+                            <h1 class="title-widget">Webbutveckling 1</h1>
+                            <ul>
+                                <li><a href="grund.html"><i class="fa fa-caret-right"></i> Grund</a></li>
+                                <li><a href="lists.html"><i class="fa fa-caret-right"></i> Listor</a></li>
+                                <li><a href="table.html"><i class="fa fa-caret-right"></i> Tabeller</a></li>
+                                <li><a href="forms.html"><i class="fa fa-caret-right"></i> Formulär</a></li>
+                                <li><a href="js.html"><i class="fa fa-caret-right"></i> Javascript</a></li>
+                                <li><a href="media.html"><i class="fa fa-caret-right"></i> Media</a></li>
+                                <li><a href="mobil.html"><i class="fa fa-caret-right"></i> Mobil webb</a></li>
+                                <li><a href="anpassad.html"><i class="fa fa-caret-right"></i> Tillgänglighet</a></li>
+                                <li><a href="links.html"><i class="fa fa-caret-right"></i> Länkar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <ul class="list-unstyled clear-margins">
+                        <li class="widget-container widget_nav_menu">
+                            <h1 class="title-widget">GitHub</h1>
+                            <ul>
+                                <li><a href="https://github.com/LordBohmies/WSP_ViBo" target="_blank"><i class="fa fa-caret-right"></i> Webbserverprogrammering 1</a></li>
+                                <li><a href="https://github.com/LordBohmies/WU_ViBo" target="_blank"><i class="fa fa-caret-right"></i> Webbutveckling 1</a></li>
+                                <li><a href="" target=""><i class="fa fa-caret-right"></i> Webbutveckling 2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <ul class="list-unstyled clear-margins">
+                        <li class="widget-container widget_recent_news">
+                            <h1 class="title-widget">Contact Detail</h1>
+                            <div class="footerp">
+                                <h2 class="title-median">Bohmies.se</h2>
+                                <p><b>Email id:</b> <a href="mailto:victor@bohmies.se">victor@bohmies.se</a></p>
+                            </div>
+                            <div class="social-icons">
+                                <ul class="nomargin">
+                                    <a href="https://www.linkedin.com/in/victorbohmies/" target="_blank"><i class="fa fa-linkedin fa-3x social-li social"></i> </a>
+                                    <a href="https://twitter.com/MrBohmies" target="_blank"><i class="fa fa-twitter fa-3x social-tw social"></i> </a>
+                                    <a href="mailto:victor.bohmies@gmail.com" target="_blank"><i class="fa fa-envelope fa-3x social-em social"></i> </a>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="copyright">
+                        &copy 2017, Bohmies.se, All rights reserved.
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="design">
+                        <a href="http://www.bohmies.se" target="_blank">Web Design & Development by Victor Bohmies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- +=================+ -->
 
-<!-- - - - - - - - - - - - - - - -
-- - - - - - JAVASCRIPT - - - - - -
-- - - - - - - - - - - - - - - - -->
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- +=================+ -->
+    <!-- | JAVASCRIPT AREA | -->
+    <!-- +=================+ -->
+    <!-- |     JQUERY      | -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- |     POPPER      | -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- |    BOOTSTRAP    | -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- |     CUSTOM      | -->
+    <script src="assets/js/topbutton.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- +=================+ -->
 </body>
 </html>

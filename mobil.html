@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+
+    <!-- +=================+ -->
+    <!-- |    CSS  AREA    | -->
+    <!-- +=================+ -->
+    <!-- |      RESET      | -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- |    IMPORTED     | -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- |    ICON AREA    | -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- |     CUSTOM      | -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- +=================+ -->
+</head>
+<body>
+    <button type="button" onclick="topFunction()" id="TopButton" class="btn btn-info" title="Go to top">Top</button>
+    <!-- +=================+ -->
+    <!-- |   HEADER AREA   | -->
+    <!-- +=================+ -->
+    <header>
+    <!-- |   NAVIGATION    | -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand brand brand-border" href="http://www.bohmies.se">BOHMIES</a>
+        <a class="navbar-brand" href="wu_index.html"><i class="fa fa-home" aria-hidden="true"></i> </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-lable="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="grund.html" id="DropdownGrund" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Grund</a>
+                    <div class="dropdown-menu" aria-labelledby="DropdownGrund">
+                        <a class="dropdown-item" href="grund.html#html">HTML</a>
+                        <a class="dropdown-item" href="grund.html#css">CSS</a>
+                        <a class="dropdown-item" href="grund.html#charset">Teckenkodning</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lists.html">Listor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="table.html">Tabeller</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="forms.html">Formulär</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="js.html">Javascript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="media.html">Media</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="DropdownAvailable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Responsiv</a>
+                    <div class="dropdown-menu" aria-labelledby="DropdownAvailable">
+                        <a class="dropdown-item" href="mobil.html">Mobil webb</a>
+                        <a class="dropdown-item" href="anpassad.html">Tillgänglighet</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="links.html">Länkar</a>
+                </li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <ul class="nomargin">
+                <a style="color: white;" href="https://github.com/LordBohmies" target="_blank"><i class="fa fa-github-alt fa-3x social-gh social" aria-hidden="true"></i></a>
+            </ul>
+        </div>
+    </nav>
+    </header>
+    <!-- +=================+ -->
+
+    <!-- +=================+ -->
+    <!-- |   BANNER AREA   | -->
+    <!-- +=================+ -->
+    <!-- |    JUMBOTRON    | -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Mobil Webb</h1>
+            <article>
+                <p class="introtext center">Fram till ungefär 2011-2012 så var det vanligaste sättet att surfa på en vanlig dator (<span class="htmlComment">desktop</span> och <span class="htmlComment">laptop</span>). Skärmstorlek och upplösning har gradvist ökats och idag är 24" den vanligaste skärmstorleken med en skiftande upplösning.</p>
+            </article>
+        </div>
+    </div>
+    <!-- +=================+ -->
+
+    <!-- +=================+ -->
+    <!-- |  CONTENT  AREA  | -->
+    <!-- +=================+ -->
+    <div class="container">
+        <section>
+            <article>
+                <h2>Utmaningar</h2>
+                <p>Ett indirekt resultat av en exploderande marknad för just mobil surfning har lett till ett väl utbyggt 3G-nät och ett 4G-nät under ständig expansion. Tillsammans med förmånliga mobilabonnemang, där surf kan vara begränsat men även obegränsat, så ställdes då stora krav om omställning för utvecklarna. En dålig sida förbrukar användarens surfmängd helt i onödan.</p>
+                <h3>Formfaktorn</h3>
+                <p>Mobilerna är idag näst intill lika kraftfulla som en modern laptop, visst skärmen är liten men tack vare en kraftfull GPU så har de lika hög upplösning som stationära skärmar. De mobila enheterna har oftast endast ett <span class="htmlComment">mjukvarutangentbord</span> som oftast skymmer en stor del av skärmen när de används.</p>
+                <h3>Opålitlig bandbredd</h3>
+                <p>Både 3G-nätet och 4G-nätet är väl utbyggda i storstadområden och 3G-nätet är även väl utbyggt ut med landets större vägar. Den största utmaningen här är att masterna belastas i olika mängd och är masten överbelastad så sjunker bandbredden drastiskt. Även om det idag är ovanligt, i alla fall söder om Mora, så kan masten vara placerad långt ifrån dig, vilket även det resulterar i en låg bandbredd. Även vid snabb förflyttning så kan det förekomma att kontakten tappas helt i någon sekund.
+                Notera dock att man i många storstäder och på tåg så har man installerat publika Wifi-nätverk som användaren kan använda i viss mån. Kom ihåg att dessa nät är just publika och är därför under ständigt hot från inkräktare.</p>
+                <h3>Svårare inmatning</h3>
+                <p><span class="htmlComment">Mjukvarutangentbord</span> kan vara väldigt små och göra det svårt för inmatning i jämförelse med ett större tangentbord. Det är även viktigt att dina interagerbara element är tillgängliga för användaren när de använder en mobil enhet, särskilt om de bara har exempelvis en hand tillgänglig.</p>
+                <h3>Olika enheter</h3>
+                <p><Strong>iOS</Strong> och  <strong>Android</strong>, de två största operativsystem på mobilmarknaden. Även om de upptar 99.6% av marknaden så är de långt ifrån de enda. Visst det finns några Operativsystem att ta hänsyn till, men varje operativsystem finns i flera olika versioner. iOS finns har ett 10-tal. Android finns som det närmare 20, 5 aktuella, versioner av. Viktigt att komma ihåg att Android mjukvara och gränssnitt modifieras av varje mobiltillverkare och ibland även operatör för att passa deras marknad.</p>
+                <h3>Nya tekniker</h3>
+                <p>Mobila enheter kommer även med inbyggda funktioner som man tidigare inte ens tänkt tanken på att använda på en webbsida. Men inbyggd <span class="htmlComment">GPS</span>, <span class="htmlComment">rörelsesensor (accelerometer)</span>, kamera, mikrofon, vibrator etc. är tekniker som öppnat upp måna möjligheter. Nya sätt att agera mot webbplatser, exempelvis luta mobilen i spel eller information som baseras på din geografiska position.</p>
+            </article>
+
+            <article>
+                <h2>Kompetens</h2>
+                <p>Om vi skulle gå in för mycket på dessa tekniker så skulle nivån bli för svår. Men tekniken är allt för viktig för att strunta helt i och vill du göra ett seriöst projekt så är det viktigt att du tar till dig all kunskap och lite till.</p>
+                <h3>Viewport</h3>
+                <p style="margin-bottom:0;">
+                    Exempel på när man som utvecklare har använt <span class="htmlElement codetext">&ltmeta</span> <span class="htmlAttributeName codetext">name</span>="<span class="htmlAttributeValue codetext">viewport</span>"<span class="htmlElement codetext"> /&gt</span> på fel sätt.
+                </p>
+                <ul>
+                    <li>När man besöker en webbsida och endast halva skärmen är använd. Vilket ofta beror på att utvecklaren bara anpassat sidan efter sin egna mobila enhet.</li>
+                    <li>När texten blir för liten för att kunna läsas och funktionen för att zooma in är borttagen.</li>
+                </ul>
+                <p>
+                    Ovan nämnda problem kan undvikas om man som utvecklare tar sig tiden att läsa dokumentation för varje webbläsare som används.<br>
+                    Med <span class="htmlElement codetext">&ltmeta</span> <span class="htmlAttributeName codetext">name</span>="<span class="htmlAttributeValue codetext">viewport</span>"<span class="htmlElement codetext"> /&gt</span>
+                    kan du styra sidornas <strong>bredd, höjd och zoom</strong>. Exempelvis om du i din CSS sätter bredden till <strong>80%</strong> så kommer frågan <strong>80% av vadå</strong> att uppstå. Med följande viewport så blir det garanterat 80% av skärmen oavsett dess bredd eller pixeldensitet.
+                </p>
+                <div class="codewindow codetext">
+                    <span class="htmlElement">&ltmeta</span>
+                    <span class="htmlAttributeName">name</span>="
+                    <span class="htmlAttributeValue ">viewport</span>"
+                    <span class="htmlAttributeName">content</span>="
+                    <span class="htmlAttributeValue ">width=device-width, initial-scale=1.0</span>"
+                    <span class="htmlElement ">&gt</span>
+                </div>
+                <p>
+                    Exemplet ovan är idag det bästa sättet att skriva en viewport.
+                </p>
+                <h3>Media queries</h3>
+                <p>
+                    <span class="cssElement">@media</span>, användes från början för att skilja mellan olika typer av enheter. I och med introduktionen av den mobila webben så har det tillkommit en står mängd <span class="htmlComment">mediafrågor</span> (<span class="htmlComment">media queries</span>). Allt för att urskilja storlek, upplösning, formfaktor och liknande. Med hjälp av dessa kan du bygga webbplatser som är anpassade efter flera <span class="htmlComment">brytpunkter</span>. Exempelvis skifta mellan 3-/ och 1-spaltslayout.
+                </p>
+                <div class="codewindow codetext">
+                    <span class="cssElement">@media</span> <span class="cssPropertyValue">screen and (max-width: 800px)</span> {<br>
+                        &nbsp&nbsp<span class="htmlComment">/* CSS för smala fönster/skärmar */</span><br>
+                    }<br>
+                    <span class="cssElement">@media</span> <span class="cssPropertyValue">screen and (min-width: 801px) and (max-width: 1200px)</span> {<br>
+                        &nbsp&nbsp<span class="htmlComment">/* CSS för mellanbreda fönster/skärmar */</span><br>
+                    }<br>
+                    <span class="cssElement">@media</span> <span class="cssPropertyValue">screen and (min-width: 1201px)</span> {<br>
+                        &nbsp&nbsp<span class="htmlComment">/* CSS för breda fönster/skärmar */</span><br>
+                    }<br>
+                </div>
+                <p>
+                    Använd brytpunkter efter vad din design kräven, utgå inte från enstaka produkter på marknaden. Tips är dock att kolla in <strong>Bootstrap</strong>.<br>
+                    Mobiler och surfplattor körs i princip alltid i <span class="htmlComment">helskärmsläge</span>.<br>
+                    Fler exempel på mediafrågor:
+                </p>
+                <div class="codewindow codetext">
+                    <span class="cssElement">@media</span>  <span class="cssPropertyValue">screen and (max-width: 800px)</span> {<br>
+                        &nbsp&nbsp<span class="htmlComment">/* Bara webbläsare som förstår media queries. <br>
+                        &nbsp&nbspLägg märke till ordet only */</span><br>
+                    }<br>
+                    <span class="cssElement">@media</span>  <span class="cssPropertyValue">screen and (min-aspect-ratio: 1/1)</span> {<br>
+                        &nbsp&nbsp<span class="htmlComment">/* Fönstret är minst lika brett som det är högt */</span><br>
+                    }<br>
+                    <span class="cssElement">@media</span>  <span class="cssPropertyValue">screen and (device-aspect-ratio: 1/1)</span> {<br>
+                        &nbsp&nbsp<span class="htmlComment">/* Enhetens skärm är minst lika bred som den är hög */</span><br>
+                    }<br>
+                    <span class="cssElement">@media</span>  <span class="cssPropertyValue">print and (min-resolution: 300dpi)</span> {<br>
+                        &nbsp&nbsp<span class="htmlComment">/* En skrivare med minst 300 punkter per tum i upplösning */</span><br>
+                    }<br>
+                    <span class="cssElement">@media</span>  <span class="cssPropertyValue">screen and (orientation: portrait)</span> {<br>
+                        &nbsp&nbsp<span class="htmlComment">/* Enheten hålls på höjden */</span><br>
+                    }<br>
+                    <span class="cssElement">@media</span>  <span class="cssPropertyValue">screen and (orientation: landscape)</span> {<br>
+                        &nbsp&nbsp<span class="htmlComment">/* Enheten hålls på bredden */</span><br>
+                    }<br>
+                </div>
+                <h3>Events</h3>
+                <p>Nya händelser som tillkom specifikt för det mobila behovet:</p>
+                <ul>
+                    <li>Touch-händelser.</li>
+                    <li>Offline/online - när man tappar eller återfår förbindelsen med nätet.</li>
+                    <li>Luta och vrida på enheten.</li>
+                    <li>Telefonrelaterade händelser - exempelvis för att pausa ett spel och skicka meddelande om det till medspelare runtom i världen när telefonen ringer.</li>
+                </ul>
+                <h3>Geolocation</h3>
+                <p>Tack vare att de flesta mobiler idag kommer med GPS så går de att spåra med Geolocation. Den kan även använda sig utav IP-adresser och nätverk i närheten för att lokalisera dig om du av någon anledning inte har GPS igång. Utnyttjas ofta av företag för att rikta reklam.</p>
+            </article>
+        </section>
+    </div>
+    <!-- +=================+ -->
+
+    <!-- +=================+ -->
+    <!-- |   FOOTER AREA   | -->
+    <!-- +=================+ -->
+    <footer class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-2">
+                    <ul class="list-unstyled clear-margins">
+                        <li class="widget-container widget_nav_menu">
+                            <h1 class="title-widget">Bohmies</h1>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-caret-right"></i> About us</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i> Blog</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i> Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <ul class="list-unstyled clear-margins">
+                        <li class="widget-container widget_nav_menu">
+                            <h1 class="title-widget">Webbutveckling 1</h1>
+                            <ul>
+                                <li><a href="grund.html"><i class="fa fa-caret-right"></i> Grund</a></li>
+                                <li><a href="lists.html"><i class="fa fa-caret-right"></i> Listor</a></li>
+                                <li><a href="table.html"><i class="fa fa-caret-right"></i> Tabeller</a></li>
+                                <li><a href="forms.html"><i class="fa fa-caret-right"></i> Formulär</a></li>
+                                <li><a href="js.html"><i class="fa fa-caret-right"></i> Javascript</a></li>
+                                <li><a href="media.html"><i class="fa fa-caret-right"></i> Media</a></li>
+                                <li><a href="mobil.html"><i class="fa fa-caret-right"></i> Mobil webb</a></li>
+                                <li><a href="anpassad.html"><i class="fa fa-caret-right"></i> Tillgänglighet</a></li>
+                                <li><a href="links.html"><i class="fa fa-caret-right"></i> Länkar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <ul class="list-unstyled clear-margins">
+                        <li class="widget-container widget_nav_menu">
+                            <h1 class="title-widget">GitHub</h1>
+                            <ul>
+                                <li><a href="https://github.com/LordBohmies/WSP_ViBo" target="_blank"><i class="fa fa-caret-right"></i> Webbserverprogrammering 1</a></li>
+                                <li><a href="https://github.com/LordBohmies/WU_ViBo" target="_blank"><i class="fa fa-caret-right"></i> Webbutveckling 1</a></li>
+                                <li><a href="" target=""><i class="fa fa-caret-right"></i> Webbutveckling 2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <ul class="list-unstyled clear-margins">
+                        <li class="widget-container widget_recent_news">
+                            <h1 class="title-widget">Contact Detail</h1>
+                            <div class="footerp">
+                                <h2 class="title-median">Bohmies.se</h2>
+                                <p><b>Email id:</b> <a href="mailto:victor@bohmies.se">victor@bohmies.se</a></p>
+                            </div>
+                            <div class="social-icons">
+                                <ul class="nomargin">
+                                    <a href="https://www.linkedin.com/in/victorbohmies/" target="_blank"><i class="fa fa-linkedin fa-3x social-li social"></i> </a>
+                                    <a href="https://twitter.com/MrBohmies" target="_blank"><i class="fa fa-twitter fa-3x social-tw social"></i> </a>
+                                    <a href="mailto:victor.bohmies@gmail.com" target="_blank"><i class="fa fa-envelope fa-3x social-em social"></i> </a>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="copyright">
+                        &copy 2017, Bohmies.se, All rights reserved.
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="design">
+                        <a href="http://www.bohmies.se" target="_blank">Web Design & Development by Victor Bohmies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- +=================+ -->
+
+    <!-- +=================+ -->
+    <!-- | JAVASCRIPT AREA | -->
+    <!-- +=================+ -->
+    <!-- |     JQUERY      | -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- |     TETHER      | -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <!-- |     POPPER      | -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!-- |    BOOTSTRAP    | -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- |     CUSTOM      | -->
+    <script src="assets/js/topbutton.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- +=================+ -->
+</body>
+</html>
