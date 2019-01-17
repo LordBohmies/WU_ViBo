@@ -10,7 +10,9 @@
 
 ##### Bakgrund - Pampas
 ###### Användningsområde
-###### HEX - #F1F2F3
+###### HEX - #F1F2F3: ![alt-text](https://via.placeholder.com/20/F1F2F3/F1F2F3?Text=%20 "#F1F2F3")
+
+C/O https://placeholder.com/
 ###### RGB - rgb(241,242,243)
 
 ##### Element - Natural Gray
