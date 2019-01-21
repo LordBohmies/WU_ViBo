@@ -8,33 +8,36 @@
 ### Layout
 ### Färgval
 
-##### Bakgrund - Pampas
+##### Bakgrund - DAWN PINK
 ###### Användningsområde
-###### HEX - #F1F2F3: ![alt-text](https://via.placeholder.com/20/F1F2F3/F1F2F3?Text=%20 "#F1F2F3")
+###### HEX - #F0E7DC: ![alt-text](https://via.placeholder.com/20/F0E7DC/F0E7DC?Text=%20 "#F0E7DC")
 
-C/O https://placeholder.com/
-###### RGB - rgb(241,242,243)
+###### RGB - rgb(241,242,243): ![alt-text](https://via.placeholder.com/20/F0E7DC/F0E7DC?Text=%20 "#F0E7DC")
 
-##### Element - Natural Gray
+##### Element - DE YORK
 ###### Användningsområde
-###### HEX
+###### HEX - #76c187: ![alt-text](https://via.placeholder.com/20/76c187/76c187?Text=%20 "#76c187")
 
-###### RGB
+###### RGB - rgb(241,242,243): ![alt-text](https://via.placeholder.com/20/F0E7DC/F0E7DC?Text=%20 "#F0E7DC")
 
-##### Huvudsaklig färg - Au Chico
+##### Huvudsaklig färg - VIRIDIAN GREEN
 ###### Användningsområde
-###### HEX
-###### RGB
+###### HEX - #5f877e: ![alt-text](https://via.placeholder.com/20/5f877e/5f877e?Text=%20 "#5f877e")
 
-##### Beteende - Sandal
-###### Användningsområde
-###### HEX
-###### RGB
+###### RGB - rgb(241,242,243): ![alt-text](https://via.placeholder.com/20/F0E7DC/F0E7DC?Text=%20 "#F0E7DC")
 
-##### Text - Bleached  Cedar
+##### Beteende - CLAY CREEK
 ###### Användningsområde
-###### HEX
-###### RGB
+###### HEX - #807e61: ![alt-text](https://via.placeholder.com/20/807e61/807e61?Text=%20 "#807e61")
+
+###### RGB - rgb(241,242,243): ![alt-text](https://via.placeholder.com/20/F0E7DC/F0E7DC?Text=%20 "#F0E7DC")
+
+##### Text -SHARK
+###### Användningsområde
+###### HEX - #1a1a21: ![alt-text](https://via.placeholder.com/20/1a1a21/1a1a21?Text=%20 "#1a1a21")
+
+###### RGB - rgb(241,242,243): ![alt-text](https://via.placeholder.com/20/F0E7DC/F0E7DC?Text=%20 "#F0E7DC")
+
 ### Typsnitt
 ### Mockup
 ### Tillgänglighet
