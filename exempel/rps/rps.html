@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors</title>
+    <!-- CSS - FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu">
+    <!-- CSS - Custom -->
+    <link rel="stylesheet" href="./rps.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+    <div class="score-board">
+        <div id="label-p1" class="badge">Player One</div>
+        <div id="label-p2" class="badge">Player Two</div>
+        <span id="score-p1">0</span>:<span id="score-p2">0</span>
+    </div>
+    <div class="result">
+        <p>Paper covers rock. You Win!</p>
+    </div>
+    <div class="choices">
+        <div id="r" class="choice"><i class="fas fa-hand-rock"></i></div>
+        <div id="p" class="choice"><i class="fas fa-hand-paper"></i></div>
+        <div id="s" class="choice"><i class="fas fa-hand-scissors"></i></div>
+    </div>
+    <p id="action-message">Make your move!</p>
+
+    <script src="./rps.js"></script>
+
+</body>
+
+</html>
