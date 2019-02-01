@@ -27,7 +27,7 @@ function win(Player1, Player2) {
     p2Score_span.innerHTML = p2Score;
     result_div.innerHTML = `${convertToWord(Player1)} beats ${convertToWord(Player2)}. You win!`;
     Player1Choice_div.classList.add("green-glow");
-    setTimeout(() => Player1Choice_div.classlist.remove("green-glow"), 500);
+    setTimeout(() => Player1Choice_div.classList.remove("green-glow"), 500);
 }
 
 function lose(Player1, Player2) {
